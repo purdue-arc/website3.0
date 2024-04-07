@@ -1,0 +1,59 @@
+body {
+    background-color: #ffffff; /* White background */
+    color: #333333; /* Dark text color */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.projects-container {
+    width: 80%; /* Adjust width as needed */
+    margin: 40px auto; /* Center projects container */
+    padding: 0 20px; /* Add padding to the container */
+}
+
+.project {
+    background-color: #f0f0f0; /* Light gray background */
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 40px; /* Increased margin */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    color: #333333; /* Dark text color */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    opacity: 0;
+    transform: translateY(50px);
+}
+
+.project.slide-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.project:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.project h2 {
+    margin-bottom: 10px; /* Decreased margin */
+    font-size: 24px; /* Larger font size */
+    color: #feda6a; /* Brighter color */
+    text-transform: uppercase; /* Uppercase text */
+    letter-spacing: 1px; /* Increased letter spacing */
+}
+
+.project p {
+    margin-bottom: 0;
+    line-height: 1.5; /* Increased line height for better readability */
+}
+
+h1 {
+    margin-bottom: 40px; /* Increased margin */
+    color: #333333; /* Dark text color */
+    font-size: 36px; /* Larger font size */
+    text-align: center; /* Center align */
+    text-transform: uppercase; /* Uppercase text */
+    letter-spacing: 2px; /* Increased letter spacing */
+    border-bottom: 2px solid #feda6a; /* Underline effect */
+    padding-bottom: 10px; /* Spacing below the title */
+}

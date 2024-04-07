@@ -1,26 +1,16 @@
-// src/App.js
 import React from 'react';
-import VideoBackground from './components/VideoBackground';
-import videoSrc from './assets/arcDemo.mp4'; // Path to your video file
+import LandingPage from './Projects'; // Import the LandingPage component
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import Projects from './Projects';
 
 function App() {
 
-
-    gsap.registerPlugin(ScrollTrigger);
-
-    gsap.from('.content-section', {
-        scrollTrigger: '.content-section', // start the animation when ".content-section" enters the viewport
-        y: 100,
-        opacity: 0,
-        duration: 1
-    });
-
     return (
         <div className="relative">
-            <VideoBackground src={videoSrc} />
+            <Projects /> {/* Use the LandingPage component */}
         </div>
     );
 }
-export default App
+
+export default App;
