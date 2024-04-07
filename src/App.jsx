@@ -1,7 +1,7 @@
 // src/App.js
 import React from 'react';
 import VideoBackground from './components/VideoBackground';
-import videoSrc from './assets/arcDemo.mp4'; // Path to your video file
+// import videoSrc from './assets/arcDemo.mp4'; // Path to your video file
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
@@ -19,7 +19,6 @@ function App() {
 
     return (
         <div className="relative">
-            <VideoBackground src={videoSrc} />
         </div>
     );
 }
