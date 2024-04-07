@@ -1,35 +1,26 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+// src/App.js
+import React from 'react';
+import VideoBackground from './components/VideoBackground';
+import videoSrc from './assets/arcDemo.mp4'; // Path to your video file
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 function App() {
-  const [count, setCount] = useState(0)
 
-  return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+
+    gsap.registerPlugin(ScrollTrigger);
+
+    gsap.from('.content-section', {
+        scrollTrigger: '.content-section', // start the animation when ".content-section" enters the viewport
+        y: 100,
+        opacity: 0,
+        duration: 1
+    });
+
+    return (
+        <div className="relative">
+            <VideoBackground src={videoSrc} />
+        </div>
+    );
 }
-
 export default App
