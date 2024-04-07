@@ -32,16 +32,16 @@ const HomePage = ({ videoSrc }) => {
         <div className="bg-white min-h-screen">
             <div className="container mx-auto px-4 py-12">
                 <div className="flex flex-col items-center justify-center">
-                    <div className="max-w-xl lg:max-w-2xl mb-8">
-                        <video autoPlay loop muted className="w-full h-auto object-cover rounded-lg shadow-xl">
-                            <source src={videoSrc} type="video/mp4"/>
-                        </video>
-                    </div>
                     <div className="text-center">
                         <h1 className="text-4xl lg:text-5xl font-bold text-gray-800">Welcome to Purdue ARC</h1>
                         <p className="mt-4 text-lg text-gray-600">
                             Exploring innovative technologies and building a community of creators.
                         </p>
+                        <div className="max-w-xl lg:max-w-2xl mb-8">
+                            <video autoPlay loop muted className="w-full h-auto object-cover rounded-lg shadow-xl">
+                                <source src={videoSrc} type="video/mp4"/>
+                            </video>
+                        </div>
                         <Link to="/about"
                               className="mt-8 inline-block bg-red-500 text-white px-6 py-3 rounded-lg shadow hover:bg-red-600 transition-colors">
                             Learn More About Us
