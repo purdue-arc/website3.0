@@ -3,9 +3,6 @@ import { gsap } from 'gsap';
 import { Link } from 'react-router-dom';
 
 const Navbar = () => {
-    useEffect(() => {
-        gsap.from('.navbar-item', { duration: 0.7, opacity: 0, y: -30, stagger: 0.1, ease: 'power2.out' });
-    }, []);
 
     return (
         <nav className="bg-white shadow-lg relative">
