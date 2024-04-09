@@ -30,15 +30,15 @@ const HomePage = () => {
     }, []);
 
     return (
-        <div className="bg-white min-h-screen">
+        <div className="bg-white min-h-screen" style={{paddingTop:"-12rem"}}>
             <div className="container mx-auto px-4 py-12">
                 <div className="flex flex-col items-center justify-center">
                     <div className="text-center">
                         <h1 className="text-4xl lg:text-5xl font-bold text-gray-800">Welcome to Purdue ARC</h1>
-                        <p className="mt-4 text-lg text-gray-600">
+                        <p className="mt-4 text-lg text-gray-600 mb-4">
                             Exploring innovative technologies and building a community of creators.
                         </p>
-                        <div className="max-w-xl lg:max-w-2xl mb-8">
+                        <div className="max-w-2xl lg:max-w-3xl mb-8">
                             <video autoPlay loop muted className="w-full h-auto object-cover rounded-lg shadow-xl">
                                 <source src={videoSrc} type="video/mp4"/>
                             </video>
