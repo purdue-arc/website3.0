@@ -8,10 +8,11 @@ import events from "./events.json";
 import testimonials from "./testimonials.json";
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
+import videoSrc from '../assets/arcDemo.mp4';
 
 gsap.registerPlugin(ScrollTrigger);
 
-const HomePage = ({ videoSrc }) => {
+const HomePage = () => {
     useEffect(() => {
         gsap.registerPlugin(ScrollTrigger);
 

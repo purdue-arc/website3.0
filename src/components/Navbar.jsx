@@ -4,7 +4,8 @@ import arcLogo from '../assets/arcicon.png';
 
 const Navbar = () => {
     return (
-        <nav className="bg-white shadow-lg relative">
+        <>
+        <nav className="bg-white shadow-lg fixed w-full">
             <div className="container mx-auto px-6 py-3 flex justify-between items-center">
                 <div className="flex items-center space-x-5">
                     <img src={arcLogo} alt="Brand Logo" className="h-10 w-10"/>
@@ -43,6 +44,12 @@ const Navbar = () => {
                 </div>
             </div>
         </nav>
+            <div className="bg-white pt-24 mb-[-24]">
+                <div className="container mx-auto px-6 py-3 flex justify-between items-center">
+                        <img src={arcLogo} alt="Brand Logo" className=" h-10 w-10 opacity-0"/>
+                </div>
+            </div>
+        </>
     );
 };
 

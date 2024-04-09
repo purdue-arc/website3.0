@@ -10,7 +10,7 @@ function App() {
     return (
         <div className="bg-gray-50 min-h-screen w-[100vw]" >
             <Navbar/>
-            <HomePage src={videoSrc} />
+            <HomePage/>
         </div>
     );
 }
