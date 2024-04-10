@@ -58,7 +58,7 @@ function Projects() {
             return (
                 <div className={`item expanded`} onClick={() => toggleExpand(index)}>
                     <p className="project-title">{projectsData[index].title}</p>
-                    <p className="description">{projectsData[index].description}</p>
+                    <div className="description">{projectsData[index].description}</div>
                 </div>
             );
         } else {
@@ -110,12 +110,10 @@ function Projects() {
     
     
     return (
-        <div className="parent">
             <div className="container">
                 {projectsData.map((_, index) => renderProjectTitle(index))}
                 {renderDummyItem()}
             </div>
-        </div>
     );
     
     
