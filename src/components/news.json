@@ -2,19 +2,19 @@
   {
     "title": "Innovative Project Launch",
     "summary": "Purdue ARC has launched a new project focusing on sustainable energy solutions.",
-    "image": "https://example.com/images/project-launch.jpg",
+    "image": "https://picsum.photos/800",
     "link": "https://example.com/news/innovative-project-launch"
   },
   {
     "title": "ARC Wins Technology Award",
     "summary": "The club was recognized at the annual tech awards for its contribution to innovation.",
-    "image": "https://example.com/images/award.jpg",
+    "image": "https://picsum.photos/850",
     "link": "https://example.com/news/arc-wins-technology-award"
   },
   {
     "title": "Community Outreach Program",
     "summary": "Purdue ARC's new community program aims to teach coding skills to high school students.",
-    "image": "https://example.com/images/community-outreach.jpg",
+    "image": "https://picsum.photos/900",
     "link": "https://example.com/news/community-outreach-program"
   }
 ]
