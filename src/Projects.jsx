@@ -2,31 +2,7 @@ import React, { useEffect } from 'react';
 import './Projects.css'; // Import your CSS file
 
 function Projects() {
-    useEffect(() => {
-        const projects = document.querySelectorAll('.project');
-
-        const slideInOnScroll = () => {
-            projects.forEach((project) => {
-                const slideInAt = (window.scrollY + window.innerHeight) - project.offsetHeight / 2;
-                const projectBottom = project.offsetTop + project.offsetHeight;
-                const isHalfShown = slideInAt > project.offsetTop;
-                const isNotScrolledPast = window.scrollY < projectBottom;
-
-                if (isHalfShown && isNotScrolledPast) {
-                    project.classList.add('slide-in');
-                } else {
-                    project.classList.remove('slide-in');
-                }
-            });
-        };
-
-        window.addEventListener('scroll', slideInOnScroll);
-
-        return () => {
-            window.removeEventListener('scroll', slideInOnScroll);
-        };
-    }, []);
-
+    
     const projectsData = [
         {
             title: "Drone Delivery",
@@ -39,6 +15,10 @@ function Projects() {
         {
             title: "Dog Copter",
             description: "We're building a groundbreaking fusion of a drone and a robotic dog, featuring autonomous navigation and camera/lidar vision. Inspired by innovations in robotic dogs (Boston Dynamics' Spot), flying cars, and drones, our goal is to create a versatile robot capable of seamless transitions, effortlessly traversing rocky land and taking flight in the air, primarily for exploration purposes. Join us as we push the boundaries of robotics to create the marvel that is DogCopter."
+        },
+        {
+            title: "CHECK OUT SOME OF OUR PROJECTS",
+            description: "n/a"
         },
         {
             title: "Piano Hand",
@@ -54,15 +34,39 @@ function Projects() {
         }
     ];
 
+    const renderProjectTitle = (index) => {
+        if (index === 3) {
+            return <p className="title">{projectsData[index].title}</p>;
+        } else {
+            return <p className="project-title">{projectsData[index].title}</p>;
+        }
+    };
+
     return (
-        <div className="projects-container">
-            <h1>Projects</h1>
-            {projectsData.map((project, index) => (
-                <div key={index} className="project">
-                    <h2>{project.title}</h2>
-                    <p>{project.description}</p>
+        <div className="parent">
+            <div className="container">
+                <div className="item">
+                    {renderProjectTitle(0)}
                 </div>
-            ))}
+                <div className="item">
+                    {renderProjectTitle(1)}
+                </div>
+                <div className="item">
+                    {renderProjectTitle(2)}
+                </div>
+                <div className="item">
+                    {renderProjectTitle(3)}
+                </div>
+                <div className="item">
+                    {renderProjectTitle(4)}
+                </div>
+                <div className="item">
+                    {renderProjectTitle(5)}
+                </div>
+                <div className="item">
+                    {renderProjectTitle(6)}
+                </div>
+            </div>
         </div>
     );
 }
