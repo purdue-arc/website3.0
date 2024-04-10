@@ -1,6 +1,11 @@
 import React, { useState } from 'react';
-import './Projects.css'; // Import your CSS file
+import './Projects.css'; 
 
+/*
+just for documnetation: if we were to add a new project to change it you would need
+to change renderDummyItem = () to suit the new one for jsx. Then in css just add the new item
+in everywhere. 
+*/
 function Projects() {
     
     const projectsData = [
@@ -57,7 +62,7 @@ function Projects() {
             // Return the expanded item
             return (
                 <div className={`item expanded`} onClick={() => toggleExpand(index)}>
-                    <p className="project-title">{projectsData[index].title}</p>
+                    <p className="project-title-expanded">{projectsData[index].title}</p>
                     <div className="description">{projectsData[index].description}</div>
                 </div>
             );
