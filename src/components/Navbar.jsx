@@ -1,7 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import { Link } from 'react-router-dom';
 import arcLogo from '../assets/arcicon.png';
-import './navbar/Navbar.css';
 const Navbar = () => {
     const [isScrolled, setIsScrolled] = useState(false);
     const [isMobile, setIsMobile] = useState(window.innerWidth < 640);
@@ -26,7 +25,7 @@ const Navbar = () => {
     }, []);
     return (
         <>
-        <nav className={`bg-white fixed w-full transition-shadow duration-300 ease-in-out ${isScrolled ? 'shadow-lg bg-opacity-90' : 'bg-opacity-100'}`}>
+        <nav className={`bg-white fixed w-full transition-shadow duration-300 ease-in-out ${isScrolled ? `${isMobileMenuOpen ? '' : 'shadow-lg'} bg-opacity-90` : 'bg-opacity-100'}`}>
             <div className="px-6 py-3 flex items-center">
                 <Link to="/" className="flex items-center space-x-5">
                     <img src={arcLogo} alt="Brand Logo" className={`my-4 transition-all duration-300 ease-in-out ${isScrolled ? 'h-10 w-10' : 'h-16 w-16'}`}/>
@@ -42,14 +41,15 @@ const Navbar = () => {
                 </div>
                 {isMobile && (
                     <button onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} className="text-gray-800 hover:text-gray-600 focus:outline-none focus:text-gray-600">
-                        <svg viewBox="0 0 24 24" className="h-6 w-6 fill-current">
+                        <svg viewBox="0 0 24 24" className="h-6 w-6 fill-current transition-transform duration-300" style={{transform: isMobileMenuOpen ? 'rotate(-90deg)' : 'rotate(0deg)'}}>
                             <path d="M4 5h16a1 1 0 000-2H4a1 1 0 000 2zm0 6h16a1 1 0 000-2H4a1 1 0 000 2zm0 6h16a1 1 0 000-2H4a1 1 0 000 2z"></path>
                         </svg>
                     </button>
                 )}
             </div>
             {isMobileMenuOpen && (
-                <div className={`sm:hidden bg-white shadow-lg absolute w-full ${isScrolled ? 'shadow-lg bg-opacity-90' : 'bg-opacity-100'}`}>
+                <div
+                    className={`sm:hidden bg-white shadow-lg absolute w-full ${isScrolled ? 'shadow-lg bg-opacity-90' : 'bg-opacity-100'}`}>
                     <Link to="/" className="block text-gray-800 hover:text-blue-600 px-6 py-2">Home</Link>
                     <Link to="/about" className="block text-gray-800 hover:text-blue-600 px-6 py-2">About Us</Link>
                     <Link to="/projects" className="block text-gray-800 hover:text-blue-600 px-6 py-2">Projects</Link>
