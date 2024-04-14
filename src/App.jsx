@@ -20,7 +20,6 @@ function App() {
                     <Route path="/wiki" element={<HomePage/>} />
                 </Routes>
             </BrowserRouter>
-
     );
 }
 export default App
