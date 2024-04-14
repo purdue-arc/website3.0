@@ -115,13 +115,15 @@ function Projects() {
     
     
     return (
-            <div className="container">
-                {projectsData.map((_, index) => renderProjectTitle(index))}
-                {renderDummyItem()}
-            </div>
+        <div className="container">
+            {projectsData.map((_, index) => renderProjectTitle(index))}
+            {renderDummyItem()}
+            <div className="p-3"></div>
+        </div>
+
     );
-    
-    
+
+
 }
 
 export default Projects;
