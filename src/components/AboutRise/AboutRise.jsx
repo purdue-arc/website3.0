@@ -1,5 +1,5 @@
 import React from "react";
-import "./About.css";
+import "./Main.css";
 import Member from "./Member";
 import ImageDefault from "../../assets/AboutRise_Assets/arcgearlogo.png";
 import Revanth from "../../assets/AboutRise_Assets/Revanth.jpg";
