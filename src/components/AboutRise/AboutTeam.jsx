@@ -1,6 +1,6 @@
 import React from "react";
 import "./Main.css";
-import Member from "./Member";
+import Member from "./Member.jsx";
 import Revanth from "../../assets/AboutRise_Assets/Revanth.jpg";
 import Vijay from "../../assets/AboutRise_Assets/Vijay.jpg";
 import Mouli from "../../assets/AboutRise_Assets/Mouli.jpg";
