@@ -31,7 +31,7 @@ const Navbar = () => {
             <div className="px-6 py-3 flex items-center">
                 <Link to="/" className="flex items-center space-x-5">
                     <img src={arcLogo} alt="Brand Logo" className={`my-4 transition-all duration-300 ease-in-out ${isScrolled ? 'h-10 w-10' : 'h-16 w-16'}`}/>
-                    <div className="text-3xl font-bold text-gray-800 hover:text-gray-700 text-nowrap">Purdue ARC</div>
+                    <div className="text-3xl font-bold text-gray-800 hover:text-gray-700 text-nowrap font-sans">Purdue ARC</div>
                 </Link>
                 <div className="flex-grow"></div>
                 <div className="hidden sm:visible sm:flex items-center space-x-1">
