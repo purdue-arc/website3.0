@@ -18,8 +18,8 @@ function Member({ img, name, role, offset, zoom, link }) {
             <div className="image-container">
                 <img src={img} alt="ARC Member" style={imageStyle}/>
             </div>
-            <h1>{name}</h1>
-            <p>{role}</p>
+            <h1 className = "font-sans">{name}</h1>
+            <p className='font-sans'>{role}</p>
         </div>
     );
 }
