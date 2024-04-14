@@ -125,12 +125,6 @@ function aboutTeam() {
       <main className="landing-main">
         <div className="content-container">
           <h1 className="title">About the ARC Team!</h1>
-          <a
-            href="/program"
-            style={{ textDecoration: "none", marginTop: "15px" }}
-          >
-          </a>
-          <div className="padding-med"></div>
           <div className="team-container">{members}</div>
         </div>
       </main>
