@@ -1,15 +1,25 @@
 import React from 'react';
-import LandingPage from './Projects'; // Import the LandingPage component
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Projects from './Projects';
+import videoSrc from './assets/arcDemo.mp4'; // Path to your video file
+import Navbar from "./components/Navbar.jsx";
+import HomePage from "./components/HomePage.jsx";
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 function App() {
 
+
     return (
-        <div className="relative">
-            <Projects /> {/* Use the LandingPage component */}
-        </div>
+        
+            <BrowserRouter>
+                <Navbar/>
+                <Routes>
+                    <Route path="/" element={<HomePage />} />
+                    <Route path="/about" element={<HomePage />} />
+                    <Route path="/projects" element={<Projects />} />
+                    <Route path="/team" element={<HomePage/>} />
+                    <Route path="/wiki" element={<HomePage/>} />
+                </Routes>
+            </BrowserRouter>
     );
 }
 
