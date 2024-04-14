@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './Projects.css'; 
+import './Projects.css';
 
 /*
 just for documnetation: if we were to add a new project to change it you would need
@@ -7,7 +7,7 @@ to change renderDummyItem = () to suit the new one for jsx. Then in css just add
 in everywhere. 
 */
 function Projects() {
-    
+
     const projectsData = [
         {
             title: "Drone Delivery",
@@ -48,16 +48,18 @@ function Projects() {
 
     // State to keep track of expanded items
     const [expandedItem, setExpandedItem] = useState(null);
+    const [blurBackground, setBlurBackground] = useState(false);
 
     const toggleExpand = (index) => {
         if (index !== 3) {
             setExpandedItem(expandedItem === index ? null : index);
+            setBlurBackground(expandedItem === null ? true : false);
         }
     };
 
     const renderProjectTitle = (index) => {
         const isExpanded = expandedItem === index;
-    
+
         if (isExpanded) {
             // Return the expanded item
             return (
@@ -76,13 +78,13 @@ function Projects() {
             );
         }
     };
-    
+
     const renderDummyItem = () => {
         if (expandedItem !== null) {
             console.log(expandedItem);
             // Determine the column and row span of the expanded item
             let gridColumn, gridRow;
-    
+
             // Set column and row spans based on expanded item
             if (expandedItem === 0) {
                 gridColumn = '1';
@@ -106,16 +108,16 @@ function Projects() {
                 gridColumn = '2 / span 2';
                 gridRow = '3';
             }
-    
+
             // Return the dummy item with dynamic column and row span
             return <div className="item dummy" style={{ gridColumn, gridRow }}></div>;
         }
     };
-    
-    
-    
+
+
+
     return (
-        <div className="container">
+        <div className={`container ${blurBackground ? 'blur-background' : ''}`}>
             {projectsData.map((_, index) => renderProjectTitle(index))}
             {renderDummyItem()}
             <div className="p-3"></div>
