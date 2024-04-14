@@ -1,0 +1,190 @@
+.item:nth-child(2),
+.item:nth-child(6) {
+    .project-title {
+        font-size: 2vw;
+        font-weight: bold;
+        color: #574e4e;
+        text-align: center;
+    }
+    .mini-description {
+        font-size: 1vw;
+        letter-spacing: 2px;
+        font-weight: 200;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color: #333333;
+        text-align: center;
+    }
+}
+
+.item:nth-child(1),
+.item:nth-child(5) {
+    grid-row: span 2;
+    .project-title {
+        font-size: 2vw;
+        font-weight: bold;
+        color: #333333;
+    }
+    .mini-description {
+        font-size: 1vw;
+        letter-spacing: 2px;
+        font-weight: 200;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color: #333333;
+    }
+}
+
+.item:nth-child(3),
+.item:nth-child(4),
+.item:nth-child(7) {
+    grid-column: span 2;
+    .project-title {
+        font-size: 2vw;
+        font-weight: bold;
+        color: #333333;
+        text-align: center;
+    }
+    .mini-description {
+        font-size: 1vw;
+        letter-spacing: 2px;
+        font-weight: 200;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color: #333333;
+        text-align: center;
+    }
+}
+
+.item:nth-child(4):hover {
+    transform: none;
+}
+
+.item:nth-child(1) {
+    .project-title {
+        font-size: 3vw;
+        font-weight: 900;
+    }
+    .mini-description {
+        font-size: 1.5vw;
+        font-weight: 500;
+    }
+    background-color: #fff5a0;
+}
+
+.item:nth-child(2) {
+    background-color: #fef9e7;
+}
+
+.item:nth-child(3) {
+    background: linear-gradient(to right, #f2ff94, #ffffff);
+}
+
+.item:nth-child(4) {
+    .project-title {
+        font-size: 4vw;
+        font-weight: 900;
+        color: #5f4700;
+        text-align: center; 
+    }
+    background-color: #fff176;
+}
+
+.item:nth-child(5) {
+    .project-title {
+        font-size: 5vw;
+        font-weight:200;
+        justify-self: center;
+        color: #362a08;
+    }
+    background: linear-gradient(to right, #f9ffcc, #f4de5f);
+}
+
+
+
+.item:nth-child(6) {
+    background: linear-gradient(to left, #e3e4db, #f4de5f);
+}
+
+.item:nth-child(7) {
+    .project-title {
+        font-size: 5vw;
+        font-weight: 300;
+    }
+    .mini-description {
+        font-size: 0.8vw;
+        font-weight: 200;
+    }
+    background-color: #f5f5f5;
+}
+
+.title {
+    font-size: 5vw;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #5f4700;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center; /* Center the text horizontally */
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 2vh;
+    height: 90vh;
+    width: 90vw;
+    align-content: center;
+    padding-top: 5vh;
+    padding-left: 10vw;
+}
+
+.body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.item:not(:nth-child(4)):hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+
+.item {
+    position: relative;
+    background-color: #f0f0f0;
+    border-radius: 1vh;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    color: #333333;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.item.expanded {
+    position: absolute;
+    width: 50vw; /* Fixed width */
+    height: 70vh; /* Fixed height */
+    z-index: 1;
+    left: 30vw; /* Align to the center horizontally */
+    top: 20vh; /* Align to the center vertically */
+    transition: transform 0.5s ease; /* Smooth transition */
+    overflow-y: auto; /* Add scrollbar when content overflows */
+}
+
+.item.dummy {
+    /* Add styles to make it look like a placeholder */
+    background-color: transparent;
+}
+
+.project-title-expanded {
+    font-size: 4vw;
+    letter-spacing: 2px;
+    font-weight: 300;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333333;
+    text-align: center;
+}
+
+.description {
+    font-size: 1.3vw;
+}
