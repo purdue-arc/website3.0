@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import { Link } from 'react-router-dom';
 import arcLogo from '../assets/arcicon.png';
+
 const Navbar = () => {
     const [isScrolled, setIsScrolled] = useState(false);
     const [isMobile, setIsMobile] = useState(window.innerWidth < 640);
@@ -23,6 +24,7 @@ const Navbar = () => {
             window.removeEventListener('resize', handleResize);
         };
     }, []);
+
     return (
         <>
         <nav className={`bg-white fixed w-full transition-shadow duration-300 ease-in-out ${isScrolled ? `${isMobileMenuOpen ? '' : 'shadow-lg'} bg-opacity-90` : 'bg-opacity-100'}`}>
@@ -33,11 +35,11 @@ const Navbar = () => {
                 </Link>
                 <div className="flex-grow"></div>
                 <div className="hidden sm:visible sm:flex items-center space-x-4">
-                    <Link to="/" className="text-gray-800 hover:text-blue-600 transition duration-300 ease-in-out">Home</Link>
-                    <Link to="/about" className="text-gray-800 hover:text-blue-600 transition duration-300 ease-in-out text-nowrap">About Us</Link>
-                    <Link to="/projects" className="text-gray-800 hover:text-blue-600 transition duration-300 ease-in-out">Projects</Link>
-                    <Link to="/team" className="text-gray-800 hover:text-blue-600 transition duration-300 ease-in-out">Team</Link>
-                    <Link to="/wiki" className="text-gray-800 hover:text-blue-600 transition duration-300 ease-in-out">Wiki</Link>
+                    <Link to="/" className="text-gray-800 hover:text-blue-600 transition duration-300 ease-in-out px-6 py-3 rounded border border-transparent hover:border-gray-300">Home</Link>
+                    <Link to="/about" className="text-gray-800 hover:text-blue-600 transition duration-300 ease-in-out px-6 py-3 rounded border border-transparent hover:border-gray-300 text-nowrap">About Us</Link>
+                    <Link to="/projects" className="text-gray-800 hover:text-blue-600 transition duration-300 ease-in-out px-6 py-3 rounded border border-transparent hover:border-gray-300">Projects</Link>
+                    <Link to="/team" className="text-gray-800 hover:text-blue-600 transition duration-300 ease-in-out px-6 py-3 rounded border border-transparent hover:border-gray-300">Team</Link>
+                    <Link to="/wiki" className="text-gray-800 hover:text-blue-600 transition duration-300 ease-in-out px-6 py-3 rounded border border-transparent hover:border-gray-300">Wiki</Link>
                 </div>
                 {isMobile && (
                     <button onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} className="text-gray-800 hover:text-gray-600 focus:outline-none focus:text-gray-600">
@@ -50,11 +52,11 @@ const Navbar = () => {
             {isMobileMenuOpen && (
                 <div
                     className={`sm:hidden bg-white shadow-lg absolute w-full ${isScrolled ? 'shadow-lg bg-opacity-90' : 'bg-opacity-100'}`}>
-                    <Link to="/" className="block text-gray-800 hover:text-blue-600 px-6 py-2">Home</Link>
-                    <Link to="/about" className="block text-gray-800 hover:text-blue-600 px-6 py-2">About Us</Link>
-                    <Link to="/projects" className="block text-gray-800 hover:text-blue-600 px-6 py-2">Projects</Link>
-                    <Link to="/team" className="block text-gray-800 hover:text-blue-600 px-6 py-2">Team</Link>
-                    <Link to="/wiki" className="block text-gray-800 hover:text-blue-600 px-6 py-2">Wiki</Link>
+                    <Link to="/" className="block text-gray-800 hover:text-blue-600 px-6 py-3 rounded border border-transparent hover:border-gray-300">Home</Link>
+                    <Link to="/about" className="block text-gray-800 hover:text-blue-600 px-6 py-3 rounded border border-transparent hover:border-gray-300">About Us</Link>
+                    <Link to="/projects" className="block text-gray-800 hover:text-blue-600 px-6 py-3 rounded border border-transparent hover:border-gray-300">Projects</Link>
+                    <Link to="/team" className="block text-gray-800 hover:text-blue-600 px-6 py-3 rounded border border-transparent hover:border-gray-300">Team</Link>
+                    <Link to="/wiki" className="block text-gray-800 hover:text-blue-600 px-6 py-3 rounded border border-transparent hover:border-gray-300">Wiki</Link>
                 </div>
             )}
         </nav>
