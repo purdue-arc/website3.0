@@ -1,5 +1,5 @@
 import React from "react";
-import "../../Main.css";
+import "./About.css";
 import Member from "./Member";
 import ImageDefault from "../../assets/AboutRise_Assets/arcgearlogo.png";
 import Revanth from "../../assets/AboutRise_Assets/Revanth.jpg";
@@ -124,10 +124,10 @@ function aboutRise() {
 
   return (
     <>
-      <main class="landing-main">
-        <div class="content-container">
-          <h1 class="title">ABOUT RISE</h1>
-          <div class="item-row left-image">
+      <main className="landing-main">
+        <div className="content-container">
+          <h1 className="title">ABOUT RISE</h1>
+          <div className="item-row left-image">
             <img
               src="https://i.imgur.com/vHjvzZo.png"
               alt="A group of people engaged in a discussion in front of a poster presentation at a robotics and AI expo"
@@ -146,7 +146,7 @@ function aboutRise() {
               institution in the realm of robotics and AI.
             </p>
           </div>
-          <div class="item-row right-image">
+          <div className="item-row right-image">
             <img
               src="https://i.imgur.com/V8wxR17.png"
               alt="A group of people posing for a photo at the RISE 2023 event, with a RISE 2023 poster in the background"
