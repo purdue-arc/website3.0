@@ -9,7 +9,7 @@ function App() {
 
 
     return (
-        
+        <div className='font-sans'>
             <BrowserRouter>
                 <Navbar/>
                 <Routes>
@@ -20,6 +20,7 @@ function App() {
                     <Route path="/wiki" element={<HomePage/>} />
                 </Routes>
             </BrowserRouter>
+        </div>
     );
 }
 
