@@ -27,7 +27,7 @@ const Navbar = () => {
 
     return (
         <>
-        <nav className={`bg-white fixed w-full transition-shadow duration-300 ease-in-out ${isScrolled ? `${isMobileMenuOpen ? '' : 'shadow-lg'} bg-opacity-90` : 'bg-opacity-100'}`}>
+        <nav className={`bg-white fixed w-full transition-shadow duration-300 ease-in-out ${isScrolled ? `${isMobileMenuOpen ? '' : 'shadow-lg'} bg-opacity-90` : 'bg-opacity-100'} z-50`}>
             <div className="px-6 py-3 flex items-center">
                 <Link to="/" className="flex items-center space-x-5">
                     <img src={arcLogo} alt="Brand Logo" className={`my-4 transition-all duration-300 ease-in-out ${isScrolled ? 'h-10 w-10' : 'h-16 w-16'}`}/>
@@ -61,7 +61,7 @@ const Navbar = () => {
             )}
         </nav>
             <div className="bg-white">
-                <div className="container mx-auto px-6 py-3 flex justify-between items-center">
+                <div className="mx-auto px-6 py-3 flex justify-between items-center">
                         <img src={arcLogo} alt="Brand Logo" className={`my-4 transition-all duration-300 ease-in-out ${isScrolled ? 'h-10 w-10' : 'h-16 w-16'} opacity-0`}/>
                 </div>
             </div>
