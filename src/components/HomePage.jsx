@@ -50,9 +50,9 @@ const HomePage = () => {
                     </div>
                 </div>
             </div>
-            <RecentNewsSection className="content-section container mx-auto px-4 py-8" news={news}/>
-            <EventsSection className="content-section container mx-auto px-4 py-8" events={events}/>
-            <TestimonialsSection className="content-section container mx-auto px-4 py-8" testimonials={testimonials}/>
+            <RecentNewsSection className=" mx-auto px-4 py-8" news={news}/>
+            <EventsSection className=" mx-auto px-4 py-8" events={events}/>
+            <TestimonialsSection className=" mx-auto px-4 py-8" testimonials={testimonials}/>
         </div>
     );
 };
