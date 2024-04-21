@@ -144,9 +144,28 @@ th {
     flex-wrap: wrap;
     display: flex;
     justify-content: center;
-    margin: 10vh 0;
+    margin: 4vh 0;
     padding: 0 10vw;
 }
+
+/* .team-group h2 {
+   
+    margin-bottom: 20px; 
+    font-size: 24px; 
+    color: #01a6e8
+  } */
+
+  .content-container > h2 {
+    color: #333; 
+    font-size: 24px; 
+    margin-bottom:  -1vh;
+    font-family: "Sansation", sans-serif;
+
+    font-weight: bold;
+  }
+.team-group {
+    margin-bottom: 30px; /* or however much space you want between groups */
+  }
 
 .team-member {
     padding-top: 5px;

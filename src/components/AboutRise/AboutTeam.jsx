@@ -105,31 +105,72 @@ function aboutTeam() {
     },
   ];
 
-  for (let i = 0; i < memberData.length; i++) {
-    members.push(
-      <div className="team-member">
-        <Member
-          name={memberData[i].name}
-          role={memberData[i].role}
-          img={memberData[i].image}
-          offset={memberData[i].offset}
-          zoom={memberData[i].zoom}
-          link={memberData[i].personalLink}
-        />
-      </div>
+
+    const devTeamData = memberData.filter(member => member.role.includes("Software Engineer"));
+  
+    // Filters out members who are part of the Project Operations (i.e., their role does NOT include "Software Engineer")
+    const projectOperationsData = memberData.filter(member => !member.role.includes("Software Engineer"));
+    const createMemberDivs = (membersData) => {
+      let memberDivs = [];
+      for (let i = 0; i < membersData.length; i++) {
+        const member = membersData[i];
+        memberDivs.push(
+          <div key={member.name} className="team-member">
+            <Member
+              name={member.name}
+              role={member.role}
+              img={member.image}
+              offset={member.offset}
+              zoom={member.zoom}
+              link={member.personalLink}
+            />
+          </div>
+        );
+      }
+      return memberDivs;
+    };
+  
+    return (
+      <>
+        <main className="landing-main">
+          <div className="content-container">
+            <h1 className="title">About the ARC Team!</h1>
+            <h2>ARC Operations</h2>
+            <div className="team-container">{createMemberDivs(projectOperationsData)}</div>
+            <h2>Development Team</h2>
+            <div className="team-container">{createMemberDivs(devTeamData)}</div>
+          </div>
+        </main>
+      </>
     );
   }
+  
 
-  return (
-    <>
-      <main className="landing-main">
-        <div className="content-container">
-          <h1 className="title">About the ARC Team!</h1>
-          <div className="team-container">{members}</div>
-        </div>
-      </main>
-    </>
-  );
-}
+  // for (let i = 0; i < memberData.length; i++) {
+  //   members.push(
+  //     <div className="team-member-operations">
+  //       <Member
+  //         name={memberData[i].name}
+  //         role={memberData[i].role}
+  //         img={memberData[i].image}
+  //         offset={memberData[i].offset}
+  //         zoom={memberData[i].zoom}
+  //         link={memberData[i].personalLink}
+  //       />
+  //     </div>
+  //   );
+  // }
+
+//   return (
+//     <>
+//       <main className="landing-main">
+//         <div className="content-container">
+//           <h1 className="title">About the ARC Team!</h1>
+//           <div className="team-container">{members}</div>
+//         </div>
+//       </main>
+//     </>
+//   );
+// }
 
 export default aboutTeam;
