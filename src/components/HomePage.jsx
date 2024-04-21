@@ -2,10 +2,8 @@ import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import RecentNewsSection from "./RecentNewsSection.jsx";
 import EventsSection from "./EventsSection.jsx";
-import TestimonialsSection from "./Testimonials.jsx";
 import news from "./news.json";
 import events from "./events.json";
-import testimonials from "./testimonials.json";
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 import videoSrc from '../assets/arcDemo.mp4';
@@ -52,7 +50,6 @@ const HomePage = () => {
             </div>
             <RecentNewsSection className=" mx-auto px-4 py-8" news={news}/>
             <EventsSection className="mx-auto px-4 py-8" events={events}/>
-            <TestimonialsSection className=" mx-auto px-4 py-8" testimonials={testimonials}/>
         </div>
     );
 };
