@@ -163,6 +163,15 @@ th {
     border-radius: 8px;
 }
 
+.logo-text {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.logo:hover .logo-text {
+    opacity: 1;
+}
+
 .team-member:hover {
     box-shadow: inset 0 0 50px #fff,
         /* inner white */

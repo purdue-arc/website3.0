@@ -51,7 +51,7 @@ const HomePage = () => {
                 </div>
             </div>
             <RecentNewsSection className=" mx-auto px-4 py-8" news={news}/>
-            <EventsSection className=" mx-auto px-4 py-8" events={events}/>
+            <EventsSection className="mx-auto px-4 py-8" events={events}/>
             <TestimonialsSection className=" mx-auto px-4 py-8" testimonials={testimonials}/>
         </div>
     );
