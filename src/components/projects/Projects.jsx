@@ -114,12 +114,11 @@ function Projects() {
                 <div 
                     className="item dummy" 
                     style={{ gridColumn, gridRow }}
-                    onClick={() => toggleExpand(expandedItem)} // Add this line
+                    onClick={() => toggleExpand(expandedItem)}
                 ></div>
             );
         }
     };
-
 
     return (
         <div className={`container ${blurBackground ? 'blur-background' : ''}`}>
@@ -128,8 +127,6 @@ function Projects() {
             <div className="p-3"></div>
         </div>
     );
-
-
 }
 
 export default Projects;
