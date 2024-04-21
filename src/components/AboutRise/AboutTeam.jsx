@@ -8,10 +8,11 @@ import Edgar_Temp from "../../assets/AboutRise_Assets/Edgar_Temp.jpeg";
 import Peter from "../../assets/AboutRise_Assets/Peter.png";
 import Nithin_Temp from "../../assets/AboutRise_Assets/Nithin_Temp.jpeg";
 import Aytaj_Temp from "../../assets/AboutRise_Assets/Aytaj_Temp.jpeg";
-import Haddy from "../../assets/AboutRise_Assets/Haddy.png"
-import Pranesh from '../../assets/AboutRise_Assets/Pranesh.jpg'
-import Kevin from '../../assets/AboutRise_Assets/Kevin.jpg'
-import Aastha from '../../assets/AboutRise_Assets/aastha.jpg'
+import Haddy from "../../assets/AboutRise_Assets/Haddy.png";
+import Pranesh from '../../assets/AboutRise_Assets/Pranesh.jpg';
+import Kevin from '../../assets/AboutRise_Assets/Kevin.jpg';
+import Aastha from '../../assets/AboutRise_Assets/aastha.jpg';
+import Shannon from '../../assets/AboutRise_Assets/Shannon.jpeg';
 function aboutTeam() {
   let members = [];
   const memberData = [
@@ -102,6 +103,14 @@ function aboutTeam() {
       offset: 0,
       zoom: 150,
       personalLink: "https://www.linkedin.com/in/kevin-t-huang/",
+    },
+    {
+      name: "Shannon Cheng",
+      role: "Software Engineer",
+      image: Shannon,
+      offset: 0,
+      zoom: 100,
+      personalLink: "https://www.linkedin.com/in/shannon-cheng-527608204/",
     },
   ];
 
