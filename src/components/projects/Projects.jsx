@@ -110,10 +110,15 @@ function Projects() {
             }
 
             // Return the dummy item with dynamic column and row span
-            return <div className="item dummy" style={{ gridColumn, gridRow }}></div>;
+            return (
+                <div 
+                    className="item dummy" 
+                    style={{ gridColumn, gridRow }}
+                    onClick={() => toggleExpand(expandedItem)} // Add this line
+                ></div>
+            );
         }
     };
-
 
 
     return (
@@ -122,7 +127,6 @@ function Projects() {
             {renderDummyItem()}
             <div className="p-3"></div>
         </div>
-
     );
 
 
