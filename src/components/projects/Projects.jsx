@@ -117,7 +117,7 @@ function Projects() {
 
 
     return (
-        <div className={`container ${blurBackground ? 'blur-background' : ''}`}>
+        <div className="container w-screen">
             {projectsData.map((_, index) => renderProjectTitle(index))}
             {renderDummyItem()}
             <div className="p-3"></div>
