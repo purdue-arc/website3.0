@@ -21,10 +21,12 @@ const EventsSection = ({ events }) => {
         const imagePath = event.image.startsWith('http') ? event.image : images[index];
         return (
             <div key={index} className="rounded overflow-hidden shadow-lg">
-                <img className="w-full" src={imagePath} alt={event.name} />
+                <div className="h-64 overflow-hidden">
+                    <img src={imagePath} alt={event.name} className="w-full h-full object-cover" />
+                </div>
                 <div className="px-6 py-4">
                     <div className="text-2xl font-bold text-center text-gray-800">{event.name}</div>
-                    <p className="text-gray-700 text-base">{event.description}</p>
+                    <p className="text-gray-700 text-base mb-4">{event.description}</p>
                     <p className="text-gray-600 text-sm">Date: {event.date}</p>
                     <p className="text-gray-600 text-sm">Location: {event.location}</p>
                 </div>
