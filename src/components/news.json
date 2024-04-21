@@ -1,20 +1,20 @@
 [
   {
-    "title": "Innovative Project Launch",
-    "summary": "Purdue ARC has launched a new project focusing on sustainable energy solutions.",
-    "image": "https://picsum.photos/800",
-    "link": "https://example.com/news/innovative-project-launch"
+    "title": "RISE 2",
+    "summary": "The Robotics and Intelligent Systems Expo (RISE) focuses on pioneering innovations in robotics and autonomy. RISE immerses attendees in robotics and AI, aiming to spark interest among students and faculty through demonstrations, presentations, and networking sessions with industry professionals. The event highlights Purdue University's leadership in these fields and fosters connections among robotics and AI enthusiasts.",
+    "image": "../assets/rise.jpg",
+    "link": "https://rise.purduearc.com/"
   },
   {
-    "title": "ARC Wins Technology Award",
-    "summary": "The club was recognized at the annual tech awards for its contribution to innovation.",
-    "image": "https://picsum.photos/850",
-    "link": "https://example.com/news/arc-wins-technology-award"
+    "title": "ARC-con",
+    "summary": "ARC-Con is a celebratory event that marks the end of the semester at ARC, highlighting the contributions of members involved in various projects like RISE and astrobotics. The event features an array of activities including free food, snacks, and drinks, a competitive bridge-building contest with prizes, and a showcase of student projects through posters and presentations. It's an opportunity for attendees to engage with project managers, ask questions about involvement, and connect with the ARC community in a festive atmosphere.",
+    "image": "../assets/arccon.png",
+    "link": ""
   },
   {
-    "title": "Community Outreach Program",
-    "summary": "Purdue ARC's new community program aims to teach coding skills to high school students.",
-    "image": "https://picsum.photos/900",
-    "link": "https://example.com/news/community-outreach-program"
+    "title": "PSP x ARC Bowling Night",
+    "summary": "The PSP x ARC Bowling Night is an enjoyable event that combines fun with community bonding. Held at the PMU Rack and Roll, this gathering offers free bowling and pizza, providing a fantastic opportunity for ARC and PSP members to mingle and make new friends. It's part of the E-week festivities, contributing to a week filled with engaging activities designed to enhance intra-club connections.",
+    "image": "../assets/bowling.png",
+    "link": ""
   }
 ]
