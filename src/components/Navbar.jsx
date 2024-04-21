@@ -38,7 +38,7 @@ const Navbar = () => {
                     <Link to="/" className="text-gray-800 hover:text-blue-600 transition duration-300 ease-in-out px-5 py-3 rounded border border-transparent hover:border-gray-300">Home</Link>
                     <Link to="/about" className="text-gray-800 hover:text-blue-600 transition duration-300 ease-in-out px-5 py-3 rounded border border-transparent hover:border-gray-300 text-nowrap">About Us</Link>
                     <Link to="/projects" className="text-gray-800 hover:text-blue-600 transition duration-300 ease-in-out px-5 py-3 rounded border border-transparent hover:border-gray-300">Projects</Link>
-                    <Link to="/team" className="text-gray-800 hover:text-blue-600 transition duration-300 ease-in-out px-5 py-3 rounded border border-transparent hover:border-gray-300">Team</Link>
+                    {/*  <Link to="/team" className="text-gray-800 hover:text-blue-600 transition duration-300 ease-in-out px-5 py-3 rounded border border-transparent hover:border-gray-300">Team</Link> */}
                     <Link to="/wiki" className="text-gray-800 hover:text-blue-600 transition duration-300 ease-in-out px-5 py-3 rounded border border-transparent hover:border-gray-300">Wiki</Link>
                 </div>
                 {isMobile && (
@@ -55,7 +55,7 @@ const Navbar = () => {
                     <Link to="/" className="block text-gray-800 hover:text-blue-600 px-6 py-3 rounded border border-transparent hover:border-gray-300">Home</Link>
                     <Link to="/about" className="block text-gray-800 hover:text-blue-600 px-6 py-3 rounded border border-transparent hover:border-gray-300">About Us</Link>
                     <Link to="/projects" className="block text-gray-800 hover:text-blue-600 px-6 py-3 rounded border border-transparent hover:border-gray-300">Projects</Link>
-                    <Link to="/team" className="block text-gray-800 hover:text-blue-600 px-6 py-3 rounded border border-transparent hover:border-gray-300">Team</Link>
+                    {/*  <Link to="/team" className="block text-gray-800 hover:text-blue-600 px-6 py-3 rounded border border-transparent hover:border-gray-300">Team</Link> */}
                     <Link to="/wiki" className="block text-gray-800 hover:text-blue-600 px-6 py-3 rounded border border-transparent hover:border-gray-300">Wiki</Link>
                 </div>
             )}
