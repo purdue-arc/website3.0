@@ -7,7 +7,7 @@ const RecentNewsSection = ({ news }) => {
     useEffect(() => {
         news.forEach((item, index) => {
             if (!item.image.startsWith('http')) {
-                import(/* @vite-ignore */ `${item.image}`  )
+                import(/* @vite-ignore */ `${item.image}`)
                     .then((image) => {
                         setImages(prev => ({ ...prev, [index]: image.default }));
                     })
@@ -20,8 +20,10 @@ const RecentNewsSection = ({ news }) => {
     const renderNewsItem = (item, index) => {
         const imagePath = item.image.startsWith('http') ? item.image : images[index];
         return item.link ? (
-            <a href={item.link} key={index} className="rounded overflow-hidden shadow-lg" style={{ textDecoration: 'none' }}>
-                <img className="w-full" src={imagePath} alt={item.title} />
+            <a href={item.link} key={index} className="rounded overflow-hidden shadow-lg block" style={{ textDecoration: 'none' }}>
+                <div className="h-64 overflow-hidden">
+                    <img src={imagePath} alt={item.title} className="w-full h-full object-cover" />
+                </div>
                 <div className="px-6 py-4">
                     <div className="text-2xl font-bold text-center text-gray-800">{item.title}</div>
                     <p className="text-gray-700 text-base">{item.summary}</p>
@@ -29,7 +31,9 @@ const RecentNewsSection = ({ news }) => {
             </a>
         ) : (
             <div key={index} className="rounded overflow-hidden shadow-lg">
-                <img className="w-full" src={imagePath} alt={item.title} />
+                <div className="h-64 overflow-hidden">
+                    <img src={imagePath} alt={item.title} className="w-full h-full object-cover" />
+                </div>
                 <div className="px-6 py-4">
                     <div className="text-2xl font-bold text-center text-gray-800">{item.title}</div>
                     <p className="text-gray-700 text-base">{item.summary}</p>

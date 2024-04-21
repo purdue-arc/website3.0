@@ -23,7 +23,7 @@ const EventsSection = ({ events }) => {
             <div key={index} className="rounded overflow-hidden shadow-lg">
                 <img className="w-full" src={imagePath} alt={event.name} />
                 <div className="px-6 py-4">
-                    <div className="font-bold text-xl mb-2">{event.name}</div>
+                    <div className="text-2xl font-bold text-center text-gray-800">{event.name}</div>
                     <p className="text-gray-700 text-base">{event.description}</p>
                     <p className="text-gray-600 text-sm">Date: {event.date}</p>
                     <p className="text-gray-600 text-sm">Location: {event.location}</p>
