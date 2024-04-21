@@ -1,23 +1,23 @@
 [
   {
-    "name": "Tech Innovation Workshop",
-    "description": "A workshop where members can learn about the latest technologies in the industry.",
-    "image": "https://picsum.photos/950",
-    "date": "2024-04-15",
+    "name": "RISE 3",
+    "description": "The Robotics and Intelligent Systems Expo (RISE) focuses on pioneering innovations in robotics and autonomy. RISE immerses attendees in robotics and AI, aiming to spark interest among students and faculty through demonstrations, presentations, and networking sessions with industry professionals. The event highlights Purdue University's leadership in these fields and fosters connections among robotics and AI enthusiasts.",
+    "image": "../assets/rise.jpg",
+    "date": "Spring 2025",
     "location": "Purdue University, West Lafayette"
   },
   {
-    "name": "Annual Hackathon",
-    "description": "Join us for our annual hackathon and compete to solve real-world problems.",
+    "name": "Coming Soon...",
+    "description": "Coming Soon...",
+    "image": "https://picsum.photos/900",
+    "date": "??",
+    "location": "??"
+  },
+  {
+    "name": "Coming Soon...",
+    "description": "Coming Soon...",
     "image": "https://picsum.photos/1000",
-    "date": "2024-05-20",
-    "location": "Online"
-  },
-  {
-    "name": "Networking Event",
-    "description": "A great opportunity to network with industry professionals and alumni.",
-    "image": "https://picsum.photos/1050",
-    "date": "2024-06-10",
-    "location": "Purdue University, West Lafayette"
+    "date": "??",
+    "location": "??"
   }
 ]
