@@ -121,10 +121,9 @@ function Projects() {
     };
 
     return (
-        <div className="container w-screen">
+        <div className="grid grid-cols-4 grid-rows-3 gap-4 content-center w-[90vw] mx-auto pt-7 pb-3">
             {projectsData.map((_, index) => renderProjectTitle(index))}
             {renderDummyItem()}
-            <div className="p-3"></div>
         </div>
     );
 }
