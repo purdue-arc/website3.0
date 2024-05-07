@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import './Projects.css';
+import wizardChess from '../../assets/wizardchess.png';
+import droneDelivery from '../../assets/dronedelivery.png';
 
 /*
 just for documnetation: if we were to add a new project to change it you would need
@@ -11,11 +13,13 @@ function Projects() {
     const projectsData = [
         {
             title: "Drone Delivery",
+            image: droneDelivery, 
             description: "Our project focuses on developing an autonomous drone capable of delivering packages, revolutionizing last-mile delivery applications. This drone will have an optimized flight control system to efficiently navigate urban environments, avoid all potential obstacles (like buildings and trees), and plan long-term routes. We are also creating a mobile app that enables users to easily interact with the drone and experience the convenience of drone delivery firsthand.",
             miniDescription: "Revolutionizing last-mile delivery with autonomous drones navigating urban obstacles."
         },
         {
             title: "Wizard Chess",
+            image: wizardChess,
             description: "We're creating a large-scale, autonomous chess game inspired by the enchanting Wizard's Chess from Harry Potter. The pieces will consist of individual robots, controlled using Raspberry Pi Picos and wifi chips, that all connect to a central computer that controls all the pieces movements. On the software side, our goal is to bring chess to life by combining voice recognition, path planning, computer vision, and swarm control to develop a unique, interactive player experience.",
             miniDescription: "Bringing Wizard's Chess to life with autonomous robots and interactive gameplay."
         },
@@ -74,6 +78,7 @@ function Projects() {
                 <div className={`item`} onClick={() => toggleExpand(index)}>
                     <p className="project-title">{projectsData[index].title}</p>
                     <p className="mini-description">{projectsData[index].miniDescription}</p>
+                    <img src={projectsData[index].image}></img>
                 </div>
             );
         }
