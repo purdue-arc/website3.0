@@ -91,46 +91,50 @@ function Projects() {
                     <p className="project-title-expanded">{projectsData[index].title}</p>
                     <div className="description">{projectsData[index].description}</div>
                     {projectsData[index].images && projectsData[index].images.length > 0 && (
-                        <div className="flex flex-col items-center space-y-4 mb-4">
+                    <div className="flex flex-col items-center space-y-4 mb-3">
+                        <div className="relative w-full mt-3 m-3 group">
                             <img
-                            src={projectsData[index].images[currentImageIndex]}
-                            alt={`Image ${currentImageIndex + 1}`}
-                            className="rounded-lg w-full object-cover mt-5"
+                                src={projectsData[index].images[currentImageIndex]}
+                                alt={`Image ${currentImageIndex + 1}`}
+                                className="rounded-lg w-full object-cover shadow-2xl"
+                                // Depending on the image sizes, you may need to adjust or limit the height here like h-80
                             />
-                            <div className="flex justify-center space-x-4 w-full items-center">
-                            <button
-                                onClick={(event) => {
-                                    event.stopPropagation();
-                                    handlePrevImage();
-                                }}
-                                disabled={currentImageIndex === 0}
-                                style={{ backgroundColor: '#01a6e8' }}
-                                className="hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-                            >
-                            </button>
+                            {currentImageIndex > 0 && (
+                                <button
+                                    onClick={(event) => {
+                                        event.stopPropagation();
+                                        handlePrevImage();
+                                    }}
+                                    className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-[#01a6e8] bg-opacity-50 hover:bg-opacity-75 text-white font-bold py-2 px-4 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                                >
+                                    &lt;
+                                </button>
+                            )}
+                            {currentImageIndex < projectsData[index].images.length - 1 && (
+                                <button
+                                    onClick={(event) => {
+                                        event.stopPropagation();
+                                        handleNextImage(index);
+                                    }}
+                                    className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-[#01a6e8] bg-opacity-50 hover:bg-opacity-75 text-white font-bold py-2 px-4 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                                >
+                                    &gt;
+                                </button>
+                            )}
+                        </div>
+                        <div className="flex justify-center space-x-4 w-full items-center">
                             <div className="flex space-x-2">
-                                {projectsData[index].images.map((image, index) => (
-                                <span
-                                    key={index}
-                                    className={`inline-block rounded-full bg-gray-400 ${
-                                    currentImageIndex === index ? "h-3 w-3" : "h-2 w-2"
-                                    }`}
-                                />
+                                {projectsData[index].images.map((image, idx) => (
+                                    <span
+                                        key={idx}
+                                        className={`inline-block rounded-full bg-gray-400 ${currentImageIndex === idx ? "h-3 w-3" : "h-2 w-2"}`}
+                                    />
                                 ))}
                             </div>
-                            <button
-                                onClick={(event) => {
-                                    event.stopPropagation();
-                                    handleNextImage(index);
-                                }}
-                                disabled={currentImageIndex === projectsData[index].images.length - 1}
-                                style={{ backgroundColor: '#01a6e8' }}
-                                className="hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-                            >
-                            </button>
-                            </div>
                         </div>
-                    )}
+                    </div>
+                )}
+
                 </div>
             );
         } else {

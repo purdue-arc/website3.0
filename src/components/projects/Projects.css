@@ -148,7 +148,7 @@
     width: 50vw; /* Fixed width */
     height: 70vh; /* Fixed height */
     z-index: 1;
-    left: 30vw; /* Align to the center horizontally */
+    left: 25vw; /* Align to the center horizontally */
     top: 20vh; /* Align to the center vertically */
     transition: transform 0.5s ease; /* Smooth transition */
     overflow-y: auto; /* Add scrollbar when content overflows */
