@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import arcLogo from '../assets/arcicon.png';
+import hoverLogo from '../assets/hoverlogo.png'; // Import the new logo
 
 const Navbar = () => {
     const [isScrolled, setIsScrolled] = useState(false);
     const [isMobile, setIsMobile] = useState(window.innerWidth < 640);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+    const [isHovered, setIsHovered] = useState(false);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -29,14 +31,17 @@ const Navbar = () => {
         <>
             <nav className={`bg-white fixed w-full transition-shadow duration-300 ease-in-out ${isScrolled ? `${isMobileMenuOpen ? '' : 'shadow-lg'} bg-opacity-90` : 'bg-opacity-100'} z-50`}>
                 <div className="px-6 py-3 flex items-center">
-                    <Link to="/" className="logo flex items-center space-x-5">
-                        <img src={arcLogo} alt="Brand Logo" className={`my-4 transition-all duration-300 ease-in-out ${isScrolled ? 'h-10 w-10' : 'h-16 w-16'}`}/>
-                        <div className="logo-text text-3xl font-bold text-gray-800 hover:text-gray-700 text-nowrap font-sans">Purdue ARC</div>
+                    <Link to="/"
+                          className="logo flex items-center space-x-5"
+                          onMouseEnter={() => setIsHovered(true)}
+                          onMouseLeave={() => setIsHovered(false)}>
+                        <img src={isHovered ? hoverLogo : arcLogo} alt="Brand Logo" className={`my-4 transition-all duration-300 ease-in-out h-16 w-25`}/>
+
                     </Link>
                     <div className="flex-grow"></div>
                     <div className="hidden sm:visible sm:flex items-center space-x-1">
                         <Link to="/" className="text-gray-800 hover:text-blue-600 transition duration-300 ease-in-out px-5 py-3 rounded border border-transparent hover:border-gray-300">Home</Link>
-                        <Link to="/about" className="text-gray-800 hover:text-blue-600 transition duration-300 ease-in-out px-5 py-3 rounded border border-transparent hover:border-gray-300 text-nowrap">About Us</Link>
+                        <Link to="/about" className="text-gray-800 hover:text-blue-600 transition duration-300 ease-in-out px-5 py-3 rounded border border-transparent hover:border-gray-300 text-nowrap">The Team</Link>
                         <Link to="/projects" className="text-gray-800 hover:text-blue-600 transition duration-300 ease-in-out px-5 py-3 rounded border border-transparent hover:border-gray-300">Projects</Link>
                         {/*  <Link to="/team" className="text-gray-800 hover:text-blue-600 transition duration-300 ease-in-out px-5 py-3 rounded border border-transparent hover:border-gray-300">Team</Link> */}
                         <a href="https://wiki.purduearc.com/" target="_blank" rel="noopener noreferrer" className="text-gray-800 hover:text-blue-600 transition duration-300 ease-in-out px-5 py-3 rounded border border-transparent hover:border-gray-300">Wiki</a>

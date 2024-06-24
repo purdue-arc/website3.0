@@ -79,39 +79,9 @@ function aboutTeam() {
       offset: 2,
       zoom: 120,
       personalLink: "https://www.linkedin.com/in/edgar-babajanyan-a28230217/",
+
     },
-    {
-      name: "Peter Kurto",
-      role: "Software Engineer",
-      image: Peter,
-      offset: 5,
-      zoom: 135,
-      personalLink: "https://www.linkedin.com/in/peter-kurto-870660250/",
-    },
-    {
-      name: "Pranesh Monda",
-      role: "Software Engineer",
-      image: Pranesh,
-      offset: 5,
-      zoom: 180,
-      personalLink: "https://www.linkedin.com/in/pranesh-monda/",
-    },
-    {
-      name: "Kevin Huang",
-      role: "Software Engineer",
-      image: Kevin,
-      offset: 0,
-      zoom: 150,
-      personalLink: "https://www.linkedin.com/in/kevin-t-huang/",
-    },
-    {
-      name: "Shannon Cheng",
-      role: "Software Engineer",
-      image: Shannon,
-      offset: 0,
-      zoom: 100,
-      personalLink: "https://www.linkedin.com/in/shannon-cheng-527608204/",
-    },
+
   ];
 
   for (let i = 0; i < memberData.length; i++) {
@@ -142,3 +112,36 @@ function aboutTeam() {
 }
 
 export default aboutTeam;
+
+{/*
+      name: "Peter Kurto",
+      role: "Software Engineer",
+      image: Peter,
+      offset: 5,
+      zoom: 135,
+      personalLink: "https://www.linkedin.com/in/peter-kurto-870660250/",
+    },
+    {
+      name: "Pranesh Monda",
+      role: "Software Engineer",
+      image: Pranesh,
+      offset: 5,
+      zoom: 180,
+      personalLink: "https://www.linkedin.com/in/pranesh-monda/",
+    },
+    {
+      name: "Kevin Huang",
+      role: "Software Engineer",
+      image: Kevin,
+      offset: 0,
+      zoom: 150,
+      personalLink: "https://www.linkedin.com/in/kevin-t-huang/",
+    },
+    {
+      name: "Shannon Cheng",
+      role: "Software Engineer",
+      image: Shannon,
+      offset: 0,
+      zoom: 100,
+      personalLink: "https://www.linkedin.com/in/shannon-cheng-527608204/",
+      */}

@@ -32,24 +32,24 @@ const HomePage = () => {
             <div className="mx-auto px-4 py-2">
                 <div className="flex flex-col items-center justify-center">
                     <div className="text-center">
-                        <h1 className="text-5xl lg:text-6xl font-bold text-gray-800">Welcome to Purdue ARC</h1>
+                        <h1 className="text-5xl lg:text-6xl font-bold text-gray-800">Welcome to ARC!</h1>
                         <p className="mt-4 text-lg text-gray-600 mb-4">
-                            Exploring innovative technologies and building a community of creators.
+                            We build to understand, create, and innovate. Join us to explore Robotics and Operations.
                         </p>
                         <div className="max-w-4xl lg:max-w-5xl mb-8">
                             <video autoPlay loop muted className="w-full h-auto object-cover rounded-lg shadow-xl">
                                 <source src={videoSrc} type="video/mp4"/>
                             </video>
                         </div>
-                        <Link to="/about"
+                        {/* <Link to="/about"
                               className="mt-8 inline-block bg-red-500 text-white px-6 py-3 rounded-lg shadow hover:bg-red-600 transition-colors">
-                            Learn More About Us
-                        </Link>
+                            The Team
+                        </Link> */}
                     </div>
                 </div>
             </div>
             <RecentNewsSection className=" mx-auto px-4 py-8" news={news}/>
-            <EventsSection className="mx-auto px-4 py-8" events={events}/>
+            {/* <EventsSection className="mx-auto px-4 py-8" events={events}/> */}
         </div>
     );
 };
