@@ -29,7 +29,7 @@ const Navbar = () => {
 
     return (
         <>
-            <nav className={`bg-white fixed w-full transition-shadow duration-300 ease-in-out ${isScrolled ? `${isMobileMenuOpen ? '' : 'shadow-lg'} bg-opacity-90` : 'bg-opacity-100'} z-50`}>
+            <nav className={`bg-blue-800 fixed w-full transition-shadow duration-300 ease-in-out ${isScrolled ? `${isMobileMenuOpen ? '' : 'shadow-lg'} bg-opacity-90` : 'bg-opacity-100'} z-50`}>
                 <div className="px-6 py-3 flex items-center">
                     <Link to="/"
                           className="logo flex items-center space-x-5"
@@ -40,14 +40,15 @@ const Navbar = () => {
                     </Link>
                     <div className="flex-grow"></div>
                     <div className="hidden sm:visible sm:flex items-center space-x-1">
-                        <Link to="/" className="text-gray-800 hover:text-blue-600 transition duration-300 ease-in-out px-5 py-3 rounded border border-transparent hover:border-gray-300">Home</Link>
-                        <Link to="/about" className="text-gray-800 hover:text-blue-600 transition duration-300 ease-in-out px-5 py-3 rounded border border-transparent hover:border-gray-300 text-nowrap">The Team</Link>
-                        <Link to="/projects" className="text-gray-800 hover:text-blue-600 transition duration-300 ease-in-out px-5 py-3 rounded border border-transparent hover:border-gray-300">Projects</Link>
-                        {/*  <Link to="/team" className="text-gray-800 hover:text-blue-600 transition duration-300 ease-in-out px-5 py-3 rounded border border-transparent hover:border-gray-300">Team</Link> */}
-                        <a href="https://wiki.purduearc.com/" target="_blank" rel="noopener noreferrer" className="text-gray-800 hover:text-blue-600 transition duration-300 ease-in-out px-5 py-3 rounded border border-transparent hover:border-gray-300">Wiki</a>
+                        <Link to="/" className="text-white hover:text-blue-600 transition duration-300 ease-in-out px-5 py-3 rounded border border-transparent hover:border-gray-300">Home</Link>
+                        <Link to="/about" className="text-white hover:text-blue-600 transition duration-300 ease-in-out px-5 py-3 rounded border border-transparent hover:border-gray-300 text-nowrap">The Team</Link>
+                        <Link to="/projects" className="text-white hover:text-blue-600 transition duration-300 ease-in-out px-5 py-3 rounded border border-transparent hover:border-gray-300">Projects</Link>
+                        {/*  <Link to="/team" className="text-white hover:text-blue-600 transition duration-300 ease-in-out px-5 py-3 rounded border border-transparent hover:border-gray-300">Team</Link> */}
+                        <a href="https://wikipage.purduearc.com/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-blue-600 transition duration-300 ease-in-out px-5 py-3 rounded border border-transparent hover:border-gray-300">Wiki</a>
+                        <a href="mailto:autonomy@purdue.edu" target="_blank" rel="noopener noreferrer" className="text-white hover:text-blue-600 transition duration-300 ease-in-out px-5 py-3 rounded border border-transparent hover:border-gray-300">Contact Us</a>
                     </div>
                     {isMobile && (
-                        <button onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} className="text-gray-800 hover:text-gray-600 focus:outline-none focus:text-gray-600">
+                        <button onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} className="text-white hover:text-white focus:outline-none focus:text-white">
                             <svg viewBox="0 0 24 24" className="h-6 w-6 fill-current transition-transform duration-300" style={{transform: isMobileMenuOpen ? 'rotate(-90deg)' : 'rotate(0deg)'}}>
                                 <path d="M4 5h16a1 1 0 000-2H4a1 1 0 000 2zm0 6h16a1 1 0 000-2H4a1 1 0 000 2zm0 6h16a1 1 0 000-2H4a1 1 0 000 2z"></path>
                             </svg>
@@ -57,11 +58,11 @@ const Navbar = () => {
                 {isMobileMenuOpen && (
                     <div
                         className={`sm:hidden bg-white shadow-lg absolute w-full ${isScrolled ? 'shadow-lg bg-opacity-90' : 'bg-opacity-100'}`}>
-                        <Link to="/" className="block text-gray-800 hover:text-blue-600 px-6 py-3 rounded border border-transparent hover:border-gray-300">Home</Link>
-                        <Link to="/about" className="block text-gray-800 hover:text-blue-600 px-6 py-3 rounded border border-transparent hover:border-gray-300">About Us</Link>
-                        <Link to="/projects" className="block text-gray-800 hover:text-blue-600 px-6 py-3 rounded border border-transparent hover:border-gray-300">Projects</Link>
-                        {/*  <Link to="/team" className="block text-gray-800 hover:text-blue-600 px-6 py-3 rounded border border-transparent hover:border-gray-300">Team</Link> */}
-                        <a href="https://wiki.purduearc.com/" target="_blank" rel="noopener noreferrer" className="block text-gray-800 hover:text-blue-600 px-6 py-3 rounded border border-transparent hover:border-gray-300">Wiki</a>
+                        <Link to="/" className="block text-white hover:text-blue-600 px-6 py-3 rounded border border-transparent hover:border-gray-300">Home</Link>
+                        <Link to="/about" className="block text-white hover:text-blue-600 px-6 py-3 rounded border border-transparent hover:border-gray-300">About Us</Link>
+                        <Link to="/projects" className="block text-white hover:text-blue-600 px-6 py-3 rounded border border-transparent hover:border-gray-300">Projects</Link>
+                        {/*  <Link to="/team" className="block text-white hover:text-blue-600 px-6 py-3 rounded border border-transparent hover:border-gray-300">Team</Link> */}
+                        <a href="https://wikipage.purduearc.com/" target="_blank" rel="noopener noreferrer" className="block text-white hover:text-blue-600 px-6 py-3 rounded border border-transparent hover:border-gray-300">Wiki</a>
                     </div>
                 )}
             </nav>

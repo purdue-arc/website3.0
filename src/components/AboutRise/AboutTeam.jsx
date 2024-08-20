@@ -1,7 +1,7 @@
 import React from "react";
 import "./Main.css";
 import Member from "./Member.jsx";
-import Revanth from "../../assets/AboutRise_Assets/Revanth.jpg";
+import Revanth from "../../assets/AboutRise_Assets/revanth.png";
 import Vijay from "../../assets/AboutRise_Assets/Vijay.jpg";
 import Mouli from "../../assets/AboutRise_Assets/Mouli.jpg";
 import Edgar_Temp from "../../assets/AboutRise_Assets/Edgar_Temp.jpeg";
@@ -13,107 +13,120 @@ import Pranesh from '../../assets/AboutRise_Assets/Pranesh.jpg';
 import Kevin from '../../assets/AboutRise_Assets/Kevin.jpg';
 import Aastha from '../../assets/AboutRise_Assets/aastha.jpg';
 import Shannon from '../../assets/AboutRise_Assets/Shannon.jpeg';
+
+import Elizabeth from '../../assets/AboutRise_Assets/elizabeth.png';
+import Josh from '../../assets/AboutRise_Assets/josh.png';
+import Tamara from '../../assets/AboutRise_Assets/tamara.png';
+import Tristan from '../../assets/AboutRise_Assets/tristan.png';
+import Visuwanaath from '../../assets/AboutRise_Assets/Visuwanaath.png';
+import Campbell from '../../assets/AboutRise_Assets/campbell.png';
+import Ryan from '../../assets/AboutRise_Assets/ryan.png';
+
 function aboutTeam() {
   let members = [];
   const memberData = [
     {
-      name: "Haddy Alchaer",
+      name: "Revanth Senthilkumaran",
       role: "ARC President",
-      image: Haddy,
-      offset: 0,
-      zoom: 105,
-      personalLink: "https://linkedin.com",
-    },
-    {
-      name: "Revanth",
-      role: "ARC Vice President",
       image: Revanth,
-      offset: 12,
-      zoom: 170,
+      offset: 0,
+      zoom: 150,
       personalLink: "https://www.linkedin.com/in/revanth-senthilkumaran/",
     },
     {
       name: "Mouli Sangita",
-      role: "ARC Operations Chair",
+      role: "ARC Vice President",
       image: Mouli,
       offset: 20,
       zoom: 190,
       personalLink: "https://www.linkedin.com/in/moulisangita/",
     },
     {
-      name: "Aytaj Aslanli",
+      name: "Tamara Itani",
       role: "ARC Treasurer",
-      image: Aytaj_Temp,
-      offset: 10,
+      image: Tamara,
+      offset: 12,
       zoom: 150,
-      personalLink: "https://www.linkedin.com/in/aytajaslanli/",
-    },
-    {
-      name: "Vijay Muthukumar",
-      role: "RISE Director",
-      image: Vijay,
-      offset: 22,
-      zoom: 200,
-      personalLink: "https://www.linkedin.com/in/vijay-muthukumar/",
+      personalLink: "https://www.linkedin.com/in/tamara-itani-290406214",
     },
     {
       name: "Aastha Patel",
-      role: "Logistics & Outreach",
+      role: "RISE Director",
       image: Aastha,
       offset: 3,
       zoom: 115,
-      personalLink: "https://www.linkedin.com/in/nithin-anand-na2004/",
+      personalLink: "https://www.linkedin.com/in/-aastha-patel",
     },
     {
       name: "Nithin Anand",
-      role: "Lead Events Coordinator",
+      role: "Operations Director",
       image: Nithin_Temp,
       offset: -7,
       zoom: 140,
-      personalLink: "https://www.linkedin.com/in/nithin-anand-na2004/",
+      personalLink: "https://www.linkedin.com/in/nithin21",
     },
+
     {
       name: "Edgar Babajanyan",
-      role: "Lead Software Engineer",
+      role: "Software Engineering Lead",
       image: Edgar_Temp,
       offset: 2,
       zoom: 120,
       personalLink: "https://www.linkedin.com/in/edgar-babajanyan-a28230217/",
-
     },
-
+    {
+      name: "Tristan Brideweser",
+      role: "Sponsorships and Outreach Lead",
+      image: Tristan,
+      offset: 2,
+      zoom: 140,
+      personalLink: "https://www.linkedin.com/in/edgar-babajanyan-a28230217/",
+    },
+    {
+      name: "Ryan Ting",
+      role: "Project Manager - Dogcopter",
+      image: Ryan,
+      offset: 0,
+      zoom: 100,
+      personalLink: "https://www.linkedin.com/in/ryan-t-ting/",
+    },
+    {
+      name: "Campbell McClendon",
+      role: "Project Manager - Rocket League",
+      image: Campbell,
+      offset: 15,
+      zoom: 160,
+      personalLink: "https://linkedin.com/in/campmccl",
+    },
+    {
+      name: "Elizabeth Kung",
+      role: "Project Manager - Astrobotics",
+      image: Elizabeth,
+      offset: 0,
+      zoom: 100,
+      personalLink: "https://www.linkedin.com/in/elizabethkung/",
+    },
+    {
+      name: "Josh Mansky",
+      role: "Project Manager - Drone Delivery",
+      image: Josh,
+      offset: 0,
+      zoom: 100,
+      personalLink: "https://www.linkedin.com/in/joshmansky",
+    },
+    {
+      name: "Visuwanaath Selvam",
+      role: "Project Manager - Piano Hand",
+      image: Visuwanaath,
+      offset: 0,
+      zoom: 100,
+      personalLink: "https://www.linkedin.com/in/visuwaselvam/",
+    },
   ];
 
-  for (let i = 0; i < memberData.length; i++) {
-    members.push(
-      <div className="team-member">
-        <Member
-          name={memberData[i].name}
-          role={memberData[i].role}
-          img={memberData[i].image}
-          offset={memberData[i].offset}
-          zoom={memberData[i].zoom}
-          link={memberData[i].personalLink}
-        />
-      </div>
-    );
-  }
+  {/*
 
-  return (
-    <>
-      <main className="landing-main">
-        <div className="content-container">
-          <h1 className="title">About the ARC Team!</h1>
-          <div className="team-container">{members}</div>
-        </div>
-      </main>
-    </>
-  );
-}
-
-export default aboutTeam;
-
-{/*
+  {
       name: "Peter Kurto",
       role: "Software Engineer",
       image: Peter,
@@ -144,4 +157,35 @@ export default aboutTeam;
       offset: 0,
       zoom: 100,
       personalLink: "https://www.linkedin.com/in/shannon-cheng-527608204/",
-      */}
+    },
+
+  */}
+
+  for (let i = 0; i < memberData.length; i++) {
+    members.push(
+        <div className="team-member" key={i}>
+          <Member
+              name={memberData[i].name}
+              role={memberData[i].role}
+              img={memberData[i].image}
+              offset={memberData[i].offset}
+              zoom={memberData[i].zoom}
+              link={memberData[i].personalLink}
+          />
+        </div>
+    );
+  }
+
+  return (
+      <>
+        <main className="landing-main">
+          <div className="content-container">
+            <h1 className="title">About the ARC Team!</h1>
+            <div className="team-container">{members}</div>
+          </div>
+        </main>
+      </>
+  );
+}
+
+export default aboutTeam;
