@@ -30,11 +30,8 @@ const HomePage = () => {
                                 <img src={Linkedin} alt="Icon 3" className="w-8 h-8"/>
                             </a>
                         </div>
-
                         <br>
                         </br>
-
-
                         <div className="max-w-5xl lg:max-w-6xl mb-8">
                             <video autoPlay loop muted className="w-full h-auto object-cover rounded-lg shadow-xl">
                                 <source src={videoSrc} type="video/mp4"/>
@@ -44,8 +41,7 @@ const HomePage = () => {
                     </div>
                 </div>
             </div>
-            <RecentNewsSection className=" mx-auto px-4 py-8"/>
-            {/* <EventsSection className="mx-auto px-4 py-8" events={events}/> */}
+            <RecentNewsSection/>
         </div>
     );
 };

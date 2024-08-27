@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { Card, Image, Text, Button, Container, Grid } from '@mantine/core';
-
-// Define the JSON data as a constant variable
 const newsData = [
     {
         "title": "RISE 2",
@@ -39,7 +37,7 @@ const RecentNewsSection = () => {
     const renderNewsItem = (item, index) => {
         const imagePath = item.image.startsWith('http') ? item.image : images[index];
         return(
-        <Grid.Col key={index} span={4} md={4}>
+        <Grid.Col key={index} span={3}>
             <Card shadow="sm" padding="lg" radius="md" withBorder>
                 <Card.Section>
                     <Image src={imagePath} height={64} alt={item.title} />
@@ -75,7 +73,7 @@ const RecentNewsSection = () => {
             <Text ta={"center"} fz={"h1"} mt="md" c={"white"} fw={"bold"}>
                 Latest News
             </Text>
-            <Grid gutter="md">
+            <Grid grow gutter="md">
                 {newsData.map(renderNewsItem)}
             </Grid>
         </Container>
