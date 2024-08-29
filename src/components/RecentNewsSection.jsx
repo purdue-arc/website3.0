@@ -37,7 +37,7 @@ const RecentNewsSection = () => {
     const renderNewsItem = (item, index) => {
         const imagePath = item.image.startsWith('http') ? item.image : images[index];
         return(
-        <Grid.Col key={index} span={3}>
+        <Grid.Col key={index} span={3} style={{ zIndex: 3, position: 'relative' }}>
             <Card shadow="sm" padding="lg" radius="md" withBorder>
                 <Card.Section>
                     <Image src={imagePath} height={64} alt={item.title} />
