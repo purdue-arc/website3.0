@@ -4,11 +4,13 @@ import Navbar from "./components/Navbar.jsx";
 import HomePage from "./components/HomePage.jsx";
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import AboutTeam from "./components/AboutRise/AboutTeam.jsx";
-
+import '@mantine/core/styles.css';
+import { MantineProvider } from '@mantine/core';
 function App() {
 
 
     return (
+        <MantineProvider forceColorScheme={'dark'} maw="100%">
         <div className='font-sans'>
             <BrowserRouter>
                 <Navbar/>
@@ -21,6 +23,7 @@ function App() {
                 </Routes>
             </BrowserRouter>
         </div>
+        </MantineProvider>
     );
 }
 

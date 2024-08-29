@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
-
-// Define the JSON data as a constant variable
+import { Card, Image, Text, Button, Container, Grid } from '@mantine/core';
 const newsData = [
     {
         "title": "RISE 2",
@@ -37,36 +36,47 @@ const RecentNewsSection = () => {
     // Render a single news item
     const renderNewsItem = (item, index) => {
         const imagePath = item.image.startsWith('http') ? item.image : images[index];
-        return item.link ? (
-            <a href={item.link} key={index} className="rounded overflow-hidden shadow-lg block" style={{ textDecoration: 'none' }}>
-                <div className="h-64 overflow-hidden">
-                    <img src={imagePath} alt={item.title} className="w-full h-full object-cover" />
-                </div>
-                <div className="px-6 py-4">
-                    <div className="text-2xl font-bold text-center text-white">{item.title}</div>
-                    <p className="text-white text-base">{item.summary}</p>
-                </div>
-            </a>
-        ) : (
-            <div key={index} className="rounded overflow-hidden shadow-lg">
-                <div className="h-64 overflow-hidden">
-                    <img src={imagePath} alt={item.title} className="w-full h-full object-cover" />
-                </div>
-                <div className="px-6 py-4">
-                    <div className="text-2xl font-bold text-center text-white">{item.title}</div>
-                    <p className="text-white text-base">{item.summary}</p>
-                </div>
-            </div>
-        );
+        return(
+        <Grid.Col key={index} span={3}>
+            <Card shadow="sm" padding="lg" radius="md" withBorder>
+                <Card.Section>
+                    <Image src={imagePath} height={64} alt={item.title} />
+                </Card.Section>
+
+                <Text align="center" weight={700} size="lg" mt="md">
+                    {item.title}
+                </Text>
+
+                <Text size="md" c="dimmed" mt="xs">
+                    {item.summary}
+                </Text>
+
+                {item.link && (
+                    <Button
+                        component="a"
+                        href={item.link}
+                        target="_blank"
+                        fullWidth
+                        mt="md"
+                        radius="md"
+                    >
+                        Learn More
+                    </Button>
+                )}
+            </Card>
+        </Grid.Col>
+        )
     };
 
     return (
-        <div className="w-10/12 mx-auto px-4 py-8">
-            <h2 className="text-3xl font-bold text-center text-white">Latest News</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-6">
+        <Container size="xl" px="md" py="xl">
+            <Text ta={"center"} fz={"h1"} mt="md" c={"white"} fw={"bold"}>
+                Latest News
+            </Text>
+            <Grid grow gutter="md">
                 {newsData.map(renderNewsItem)}
-            </div>
-        </div>
+            </Grid>
+        </Container>
     );
 };
 
