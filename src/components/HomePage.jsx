@@ -22,22 +22,26 @@ const HomePage = () => {
     return (
         <>
         {showDots && (<>
-        <Dots className={classes.dots} style={{ left: dotXOffset * 0, top: 0*dotYOffset }} />
-      <Dots className={classes.dots} style={{ left: 3 * dotXOffset, top: 0*dotYOffset }} />
-      <Dots className={classes.dots} style={{ left: 0 * dotXOffset, top: 7 * dotYOffset }} />
-      <Dots className={classes.dots} style={{ right: 0 * dotXOffset, top: 3 * dotYOffset }} />
-      <Dots className={classes.dots} style={{ right: 4 * dotXOffset, top: 14 * dotYOffset }} />
-        <Dots className={classes.dots} style={{ left: dotXOffset * 0, top: 18*dotYOffset }} />
-      <Dots className={classes.dots} style={{ left: 3 * dotXOffset, top: 20*dotYOffset }} />
+      
+      <Dots className={classes.dots} style={{ left: 1 * dotXOffset, top: 1 * dotYOffset }} />
+      <Dots className={classes.dots} style={{ left: 3 * dotXOffset, top: 8 * dotYOffset }} />
+      <Dots className={classes.dots} style={{ left: 0 * dotXOffset, top: 20 * dotYOffset }} />
+      <Dots className={classes.dots} style={{ left: 15 * dotXOffset, top: 18 * dotYOffset }} />
+      <Dots className={classes.dots} style={{ left: 3 * dotXOffset, top: 45 * dotYOffset }} />
       <Dots className={classes.dots} style={{ left: 12 * dotXOffset, top: 32 * dotYOffset }} />
+
       <Dots className={classes.dots} style={{ right: 0 * dotXOffset, top: 28 * dotYOffset }} />
       <Dots className={classes.dots} style={{ right: 8 * dotXOffset, top: 80 * dotYOffset }} />
+      <Dots className={classes.dots} style={{ right: 0 * dotXOffset, top: 3 * dotYOffset }} />
+      <Dots className={classes.dots} style={{ right: 4 * dotXOffset, top: 14 * dotYOffset }} />
+      
       </>)
       }
     <Container className={classes.wrapper} size={'100%'}>
       <div className={classes.inner}>
-        <Title className={classes.title}>
+        <Title fz={150} className={classes.title}>
           We{' '}
+          {/* Arc light blue #8CBAEA */}
           <Text component="span" c={'blue'} inherit>
             Are 
           </Text>{' '}
