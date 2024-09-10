@@ -14,9 +14,9 @@ import Visuwanaath from '../../assets/AboutRise_Assets/Visuwanaath.png';
 import Campbell from '../../assets/AboutRise_Assets/campbell.png';
 import Ryan from '../../assets/AboutRise_Assets/ryan.png';
 import Yashvi from '../../assets/AboutRise_Assets/Yashvi.jpeg';
-import Siddarth from '../../assets/AboutRise_Assets/Siddarth.jpg';
+import Siddarth from '../../assets/AboutRise_Assets/Siddarth.png';
 import Priyanka from '../../assets/AboutRise_Assets/Priyanka.jpg';
-import Archis from '../../assets/AboutRise_Assets/archis.jpg';
+import Archis from '../../assets/AboutRise_Assets/archis.png';
 
 import { Avatar, Text, Button, Paper, Grid, ActionIcon, Box } from '@mantine/core';
 function aboutTeam() {
