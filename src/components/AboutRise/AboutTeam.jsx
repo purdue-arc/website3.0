@@ -16,12 +16,13 @@ import Ryan from '../../assets/AboutRise_Assets/ryan.png';
 import Yashvi from '../../assets/AboutRise_Assets/Yashvi.jpeg';
 import Siddarth from '../../assets/AboutRise_Assets/Siddarth.jpg';
 import Priyanka from '../../assets/AboutRise_Assets/Priyanka.jpg';
+import Archis from '../../assets/AboutRise_Assets/archis.jpg';
 
 import { Avatar, Text, Button, Paper, Grid, ActionIcon, Box } from '@mantine/core';
 function aboutTeam() {
   const memberData = [
     {
-      name: "Revanth Senthilkumaran",
+      name: "Revanth Senthil",
       role: "ARC President",
       image: Revanth,
       personalLink: "https://www.linkedin.com/in/revanth-senthilkumaran/",
@@ -57,35 +58,35 @@ function aboutTeam() {
     },
     {
       name: "Campbell McClendon",
-      role: "Project Manager - Rocket League",
+      role: "Project Lead - Rocket League",
       image: Campbell,
       personalLink: "https://linkedin.com/in/campmccl",
       email: "test@gmail.com"
     },
     {
       name: "Elizabeth Kung",
-      role: "Project Manager - Astrobotics",
+      role: "Project Lead - Astrobotics",
       image: Elizabeth,
       personalLink: "https://www.linkedin.com/in/elizabethkung/",
       email: "test@gmail.com"
     },
     {
       name: "Josh Mansky",
-      role: "Project Manager - Drone Delivery",
+      role: "Project Lead - Drone Delivery",
       image: Josh,
       personalLink: "https://www.linkedin.com/in/joshmansky",
       email: "test@gmail.com"
     },
     {
       name: "Visuwanaath Selvam",
-      role: "Project Manager - Piano Hand",
+      role: "Project Lead - Piano Hand",
       image: Visuwanaath,
       personalLink: "https://www.linkedin.com/in/visuwaselvam/",
       email: "selvamv@purdue.edu"
     },
     {
       name: "Siddarth Calidas",
-      role: "Project Manager - Dog Copter",
+      role: "Project Lead - Dog Copter",
       image: Siddarth,
       offset: 0,
       zoom: 100,
@@ -94,7 +95,7 @@ function aboutTeam() {
     },
     {
       name: "Priyanka Soe",
-      role: "Project Manager - Sphero Swarm",
+      role: "Project Lead - Sphero Swarm",
       image: Priyanka,
       offset: 0,
       zoom: 100,
@@ -104,7 +105,7 @@ function aboutTeam() {
 
     {
       name: "Edgar Babajanyan",
-      role: "Software Engineering Lead",
+      role: "Development Lead",
       image: Edgar_Temp,
       personalLink: "https://www.linkedin.com/in/edgar-babajanyan-a28230217/",
       email: "test@gmail.com"
@@ -125,42 +126,50 @@ function aboutTeam() {
       personalLink: "https://www.linkedin.com/in/yashvi-agrawal/",
       email: "agarw192@purdue.edu"
     },
+    {
+      name: "Archis Behere",
+      role: "Shop Manager",
+      image: Archis,
+      personalLink: "https://www.linkedin.com/in/asbehere",
+      email: "asbehere@purdue.edu"
+    },
   ];
-  
+
   return (
     <main style={{ padding: '100px' }}>
-    <Text ta="center" fz="h1" fw="bold" mt="md" mb="xl">
-      Meet the ARC Board!
-    </Text>
-    <Grid grow spacing="lg" breakpoints={[{ maxWidth: 'md', cols: 1 }]}>
-      {memberData.map((member, index) => (
-        <Grid.Col span={3}>
-        <Paper radius="md" withBorder p="lg" key={index} >
-          <Avatar
-            src={member.image}
-            size={120}
-            radius={120}
-            mx="auto"
-          />
-          <Box ta="center">
-          <Text fz="lg" fw={500} mt="md">
-            {member.name}
-          </Text>
-          <Text fz="sm" fw={600}>
-            {member.role}
-          </Text>
-          <Text c="dimmed" fz="sm" mb={3}>
-            {member.email}
-          </Text>
-          <ActionIcon onClick={() => window.open(member.personalLink, '_blank')} >
-          <IconBrandLinkedin/>
-          </ActionIcon>
-          </Box>
-        </Paper>
-        </Grid.Col>
-      ))}
-    </Grid>
-  </main>
+      <Text ta="center" fz="120" fw="bold" mt="md" mb="xl">
+        Meet the ARC Board!
+      </Text>
+      <Grid grow spacing="lg" breakpoints={[{ maxWidth: 'md', cols: 1 }]}>
+        {memberData.map((member, index) => (
+          <Grid.Col span={3} key={index}>
+            <Paper radius="md" withBorder p="lg" bg='dark' >
+              <Avatar
+                src={member.image}
+                size={300}
+                radius={9999}
+                mx="auto"
+                // style={{ width: '90%', height: '10%'}}
+              />
+              <Box ta="center">
+                <Text fz="h1" fw={500} mt="md">
+                  {member.name}
+                </Text>
+                <Text fz="h2" fw={600}>
+                  {member.role}
+                </Text>
+                <Text c="dimmed" fz="h3" mb={3}>
+                  {member.email}
+                </Text>
+                <ActionIcon size={'xl'} onClick={() => window.open(member.personalLink, '_blank')} >
+                  <IconBrandLinkedin size={'xl'}/>
+                </ActionIcon>
+              </Box>
+            </Paper>
+          </Grid.Col>
+        ))}
+      </Grid>
+    </main>
   );
 }
 
