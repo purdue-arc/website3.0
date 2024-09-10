@@ -1,45 +1,70 @@
-import { useState } from 'react';
-import { Container, Group, Burger, Text} from '@mantine/core';
-import { useDisclosure } from '@mantine/hooks';
+import {
+  Group,
+  Text,
+  Container,
+  Burger,
+  Drawer,
+  Box,
+  Divider,
+} from '@mantine/core';
+import { useState } from 'react';;
 import { Link } from 'react-router-dom';
-import { IconBrandGithub } from '@tabler/icons-react';
-import ARCICON from '../assets/hoverlogo.png'
+import { useDisclosure } from '@mantine/hooks';
+import ARCICON from '../assets/hoverlogo.png';
 import classes from './HeaderSimple.module.css';
 
-const links = [
+const linksData = [
   { link: '/', label: 'Home' },
   { link: '/about', label: 'The Team' },
   { link: '/projects', label: 'Projects' },
   { link: 'https://wikipage.purduearc.com/', label: 'Wiki' },
-  { link: 'mailto:autonomy@purdue.edu', label: 'Contact Us' },
+  { link: 'mailto:autonomy@purdue.edu', label: 'Email Us' },
 ];
 
 export function HeaderSimple() {
-  const [opened, { toggle }] = useDisclosure(false);
-  const [active, setActive] = useState(links[0].link);
+  const [drawerOpened, { toggle: toggleDrawer, close: closeDrawer }] = useDisclosure(false);
+  const [active, setActive] = useState(linksData[0].link);
 
-  const items = links.map((link) => (
-    <Link key={link.label} to={link.link}  className={classes.link} data-active={active === link.link || undefined} onClick={(event) =>{event.preventDefault;setActive(link.link)}}>
-        <Text fz='sm' c={'white'}> {link.label}</Text>
+  const menuItems = linksData.map((item) => (
+    <Link key={item.label} to={item.link} className={classes.link} data-active={active === item.link || undefined} onClick={(event) => {event.preventDefault;setActive(item.link);closeDrawer()}}>
+      <Text fz='sm' c={'white'}>{item.label}</Text>
     </Link>
   ));
 
   return (
-    //Arc Dark blue #121C40
-    // style={{ backgroundColor: '#121C40' }}
-    <header className={classes.header}>
-      <Container size="md" className={classes.inner}>
+    <Box pb={120}>
+      <header className={classes.header}>
+        <Container size="md" className={classes.inner}>
+          <Link to="/" onClick={() => {closeDrawer();setActive('/')}}>
+            <img
+              src={ARCICON}
+              alt="ARCICON"
+              className={classes.logo}
+              style={{ height: '60px', marginRight: '30px', cursor: 'pointer' }}
+            />
+          </Link>
 
-        <Link to="/" onClick={() => setActive('/')}>
-          <img src={ARCICON} alt="ARCICON" className={classes.logo} style={{ height: '60px', marginRight: '30px', cursor: 'pointer' }} />
-        </Link>
+          <Group h="100%" gap={5} visibleFrom="sm">
+            {menuItems}
+          </Group>
 
+          <Burger opened={drawerOpened} onClick={toggleDrawer} hiddenFrom="sm" size="sm" />
+        </Container>
+      </header>
 
-        <Group gap={5} visibleFrom="xs">
-          {items}
-        </Group>
-        <Burger opened={opened} onClick={toggle} hiddenFrom="xs" size="sm" />
-      </Container>
-    </header>
+      <Drawer
+        opened={drawerOpened}
+        onClose={closeDrawer}
+        size="100%"
+        padding="md"
+        title="Pages"
+        hiddenFrom="sm"
+        zIndex={1000000}
+      >
+          <Divider my="sm" />
+            {menuItems}
+          <Divider my="sm" />
+      </Drawer>
+    </Box>
   );
 }
