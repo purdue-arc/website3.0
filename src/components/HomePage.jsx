@@ -93,7 +93,7 @@ const HomePage = () => {
       </div>
     </Container>
     <Container size='xl' className='mb-8'>
-        <video autoPlay loop muted className="w-full h-auto object-cover rounded-lg shadow-xl" style={{ zIndex: 3, position: 'relative' }} >
+        <video autoPlay loop muted playsInline className="w-full h-auto object-cover rounded-lg shadow-xl" style={{ zIndex: 3, position: 'relative' }} >
           <source src={videoSrc} type="video/mp4" />
         </video>
       </Container>
