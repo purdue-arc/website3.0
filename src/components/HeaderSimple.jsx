@@ -3,6 +3,7 @@ import { Container, Group, Burger, Text} from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import { Link } from 'react-router-dom';
 import { IconBrandGithub } from '@tabler/icons-react';
+import ARCICON from '../assets/hoverlogo.png'
 import classes from './HeaderSimple.module.css';
 
 const links = [
@@ -28,7 +29,12 @@ export function HeaderSimple() {
     // style={{ backgroundColor: '#121C40' }}
     <header className={classes.header}>
       <Container size="md" className={classes.inner}>
-        <IconBrandGithub size={28} />
+
+        <Link to="/" onClick={() => setActive('/')}>
+          <img src={ARCICON} alt="ARCICON" className={classes.logo} style={{ height: '60px', marginRight: '30px', cursor: 'pointer' }} />
+        </Link>
+
+
         <Group gap={5} visibleFrom="xs">
           {items}
         </Group>

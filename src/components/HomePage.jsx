@@ -54,27 +54,52 @@ const HomePage = () => {
               We build to understand, create, and innovate. Join us to explore Robotics and Operations.
             </Text>
           </Container>
-          <Container ta={"center"}>
-            <ActionIcon size={90} variant='transparent' component="a" href="https://discord.com/invite/feyyGCA6QU" >
-              <IconBrandDiscord size={90} color="white" />
-            </ActionIcon>
-            <ActionIcon size={90} ml={'lg'} mr={'lg'} variant='transparent' component="a" href="https://www.instagram.com/purdue.arc/">
-              <IconBrandInstagram size={90} color="white" />
-            </ActionIcon>
-            <ActionIcon size={90} variant='transparent' component="a" href="tps://www.linkedin.com/company/purdue-arc/mycompany/">
-              <IconBrandLinkedin size={90} color="white" />
-            </ActionIcon>
+        <Container ta={"center"}>
+              <ActionIcon
+                  size={90}
+                  variant='transparent'
+                  component="a"
+                  href="https://discord.com/invite/feyyGCA6QU"
+                  target="_blank"
+                  rel="noopener noreferrer"
+              >
+                  <IconBrandDiscord size={90} color="white" />
+              </ActionIcon>
+
+              <ActionIcon
+                  size={90}
+                  ml={'lg'}
+                  mr={'lg'}
+                  variant='transparent'
+                  component="a"
+                  href="https://www.instagram.com/purdue.arc/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+              >
+                  <IconBrandInstagram size={90} color="white" />
+              </ActionIcon>
+
+              <ActionIcon
+                  size={90}
+                  variant='transparent'
+                  component="a"
+                  href="https://www.linkedin.com/company/purdue-arc/mycompany/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+              >
+                  <IconBrandLinkedin size={90} color="white" />
+              </ActionIcon>
           </Container>
-        </div>
-      </Container>
-      <Container size='xl' className='mb-8'>
+      </div>
+    </Container>
+    <Container size='xl' className='mb-8'>
         <video autoPlay loop muted className="w-full h-auto object-cover rounded-lg shadow-xl" style={{ zIndex: 3, position: 'relative' }} >
           <source src={videoSrc} type="video/mp4" />
         </video>
       </Container>
-      <RecentNewsSection />
-    </>
-  );
+          <RecentNewsSection />
+        </>
+    );
 };
 
 export default HomePage;

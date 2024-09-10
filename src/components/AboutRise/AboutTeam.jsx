@@ -26,56 +26,56 @@ function aboutTeam() {
       role: "ARC President",
       image: Revanth,
       personalLink: "https://www.linkedin.com/in/revanth-senthilkumaran/",
-      email: "revo@gmail.com"
+      email: "senthilr@purdue.edu"
     },
     {
       name: "Mouli Sangita",
       role: "ARC Vice President",
       image: Mouli,
       personalLink: "https://www.linkedin.com/in/moulisangita/",
-      email: "test@gmail.com"
+      email: "msangita@purdue.edu"
     },
     {
       name: "Tamara Itani",
       role: "ARC Treasurer",
       image: Tamara,
       personalLink: "https://www.linkedin.com/in/tamara-itani-290406214",
-      email: "test@gmail.com"
+      email: "titani@purdue.edu"
     },
     {
       name: "Aastha Patel",
       role: "RISE Director",
       image: Aastha,
       personalLink: "https://www.linkedin.com/in/-aastha-patel",
-      email: "test@gmail.com"
+      email: "pate1695@purdue.edu"
     },
     {
       name: "Nithin Anand",
       role: "Operations Director",
       image: Nithin_Temp,
       personalLink: "https://www.linkedin.com/in/nithin21",
-      email: "test@gmail.com"
+      email: "anand118@purdue.edu"
     },
     {
       name: "Campbell McClendon",
       role: "Project Lead - Rocket League",
       image: Campbell,
       personalLink: "https://linkedin.com/in/campmccl",
-      email: "test@gmail.com"
+      email: "mcclendj@purdue.edu"
     },
     {
       name: "Elizabeth Kung",
       role: "Project Lead - Astrobotics",
       image: Elizabeth,
       personalLink: "https://www.linkedin.com/in/elizabethkung/",
-      email: "test@gmail.com"
+      email: "kunge@purdue.edu"
     },
     {
       name: "Josh Mansky",
       role: "Project Lead - Drone Delivery",
       image: Josh,
       personalLink: "https://www.linkedin.com/in/joshmansky",
-      email: "test@gmail.com"
+      email: "jmansky@purdue.edu"
     },
     {
       name: "Visuwanaath Selvam",
@@ -108,14 +108,14 @@ function aboutTeam() {
       role: "Development Lead",
       image: Edgar_Temp,
       personalLink: "https://www.linkedin.com/in/edgar-babajanyan-a28230217/",
-      email: "test@gmail.com"
+      email: "ebabajan@purdue.edu"
     },
     {
       name: "Tristan Brideweser",
       role: "Sponsorships and Outreach Lead",
       image: Tristan,
       personalLink: "https://www.linkedin.com/in/edgar-babajanyan-a28230217/",
-      email: "test@gmail.com"
+      email: "tbridewe@purdue.edu"
     },
     {
       name: "Yashvi Agarval",
