@@ -88,8 +88,6 @@ function aboutTeam() {
       name: "Siddarth Calidas",
       role: "Project Lead - Dog Copter",
       image: Siddarth,
-      offset: 0,
-      zoom: 100,
       personalLink: "https://www.linkedin.com/in/siddarth-calidas/",
       email: "scalidas@purdue.edu"
     },
@@ -97,8 +95,6 @@ function aboutTeam() {
       name: "Priyanka Soe",
       role: "Project Lead - Sphero Swarm",
       image: Priyanka,
-      offset: 0,
-      zoom: 100,
       personalLink: "https://www.linkedin.com/in/priyanka-soe/",
       email: "soep@purdue.edu"
     },
@@ -121,8 +117,6 @@ function aboutTeam() {
       name: "Yashvi Agarval",
       role: "Marketing and Design Lead",
       image: Yashvi,
-      offset: 0,
-      zoom: 100,
       personalLink: "https://www.linkedin.com/in/yashvi-agrawal/",
       email: "agarw192@purdue.edu"
     },
@@ -137,7 +131,7 @@ function aboutTeam() {
 
   return (
     <main style={{ padding: '100px' }}>
-      <Text ta="center" fz="120" fw="bold" mt="md" mb="xl">
+      <Text ta="center" c='white' fz="120" fw="bold" mt="md" mb="xl">
         Meet the ARC Board!
       </Text>
       <Grid grow spacing="lg" breakpoints={[{ maxWidth: 'md', cols: 1 }]}>
@@ -146,10 +140,10 @@ function aboutTeam() {
             <Paper radius="md" withBorder p="lg" bg='dark' >
               <Avatar
                 src={member.image}
-                size={300}
+                // size={300}
                 radius={9999}
                 mx="auto"
-                // style={{ width: '90%', height: '10%'}}
+                style={{ width: '100%', maxWidth: '300px', height: 'auto' }}
               />
               <Box ta="center">
                 <Text fz="h1" fw={500} mt="md">
@@ -162,7 +156,7 @@ function aboutTeam() {
                   {member.email}
                 </Text>
                 <ActionIcon size={'xl'} onClick={() => window.open(member.personalLink, '_blank')} >
-                  <IconBrandLinkedin size={'xl'}/>
+                  <IconBrandLinkedin size={'80'}/>
                 </ActionIcon>
               </Box>
             </Paper>
