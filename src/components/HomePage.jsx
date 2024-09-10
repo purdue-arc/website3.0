@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import RecentNewsSection from "./RecentNewsSection.jsx";
-import EventsSection from "./EventsSection.jsx";
-import events from "./events.json";
+// import EventsSection from "./EventsSection.jsx";
+// import events from "./events.json";
 import videoSrc from '../assets/arcDemo.mp4';
 import { Title, Text, Container, ActionIcon } from '@mantine/core';
 import { useMediaQuery } from '@mantine/hooks';

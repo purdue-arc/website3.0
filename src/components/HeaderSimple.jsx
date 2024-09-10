@@ -35,12 +35,13 @@ export function HeaderSimple() {
     <Box pb={120}>
       <header className={classes.header}>
         <Container size="md" className={classes.inner}>
-          <Link to="/" onClick={() => {closeDrawer();setActive('/')}}>
+          <Link to="/" onClick={() => {closeDrawer();setActive('/')}} >
             <img
               src={ARCICON}
               alt="ARCICON"
               className={classes.logo}
-              style={{ height: '60px', marginRight: '30px', cursor: 'pointer' }}
+              style={{ height: '60px', marginRight: '30px', cursor: 'pointer' ,zIndex: 3, position: 'relative' }}
+
             />
           </Link>
 

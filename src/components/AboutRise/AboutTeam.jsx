@@ -131,7 +131,7 @@ function aboutTeam() {
 
   return (
     <main style={{ padding: '100px' }}>
-      <Text ta="center" c='white' fz="120" fw="bold" mt="md" mb="xl">
+      <Text ta="center" c='white' fz="h1" fw="bold" mt="md" mb="xl">
         Meet the ARC Board!
       </Text>
       <Grid grow spacing="lg" breakpoints={[{ maxWidth: 'md', cols: 1 }]}>
@@ -141,18 +141,18 @@ function aboutTeam() {
               <Avatar
                 src={member.image}
                 // size={300}
-                radius={9999}
+                radius={100}
                 mx="auto"
                 style={{ width: '100%', maxWidth: '300px', height: 'auto' }}
               />
               <Box ta="center">
-                <Text fz="h1" fw={500} mt="md">
+                <Text fz="lg" fw={500} mt="md">
                   {member.name}
                 </Text>
-                <Text fz="h2" fw={600}>
+                <Text fz="sm" fw={600}>
                   {member.role}
                 </Text>
-                <Text c="dimmed" fz="h3" mb={3}>
+                <Text c="dimmed" fz="sm" mb={3}>
                   {member.email}
                 </Text>
                 <ActionIcon size={'xl'} onClick={() => window.open(member.personalLink, '_blank')} >
