@@ -32,7 +32,7 @@ export function HeaderSimple() {
   ));
 
   return (
-    <Box pb={120}>
+    <Box pb={50}>
       <header className={classes.header}>
         <Container size="md" className={classes.inner}>
           <Link to="/" onClick={() => {closeDrawer();setActive('/')}} >
