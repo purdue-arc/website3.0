@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar.jsx";
 import HomePage from "./components/HomePage.jsx";
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import AboutTeam from "./components/AboutRise/AboutTeam.jsx";
+//Hi - Pranavseelam
 
 function App() {
 
