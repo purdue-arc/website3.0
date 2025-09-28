@@ -7,7 +7,7 @@ import AboutTeam from "./components/AboutRise/AboutTeam.jsx";
 
 function App() {
 
-
+    // saanvi's comment
     return (
         <div className='font-sans'>
             <BrowserRouter>
